@@ -35,9 +35,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 12);
+            button1.Location = new Point(22, 26);
+            button1.Margin = new Padding(6);
             button1.Name = "button1";
-            button1.Size = new Size(179, 28);
+            button1.Size = new Size(332, 60);
             button1.TabIndex = 0;
             button1.Text = "Carregar Veiculos";
             button1.UseVisualStyleBackColor = true;
@@ -46,19 +47,22 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(208, 12);
+            dataGridView1.Location = new Point(22, 142);
+            dataGridView1.Margin = new Padding(6);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(762, 157);
+            dataGridView1.Size = new Size(1796, 235);
             dataGridView1.TabIndex = 1;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(995, 450);
+            ClientSize = new Size(1848, 960);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
+            Margin = new Padding(6);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
