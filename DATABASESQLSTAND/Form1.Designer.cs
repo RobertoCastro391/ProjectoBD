@@ -1,4 +1,8 @@
-﻿namespace DATABASESQLSTAND
+﻿using Org.BouncyCastle.Asn1.Crmf;
+using static System.Net.Mime.MediaTypeNames;
+using System.Drawing.Printing;
+
+namespace DATABASESQLSTAND
 {
     partial class Form1
     {
@@ -28,50 +32,126 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             dataGridView1 = new DataGridView();
+            Voltar = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(22, 26);
-            button1.Margin = new Padding(6);
-            button1.Name = "button1";
-            button1.Size = new Size(332, 60);
-            button1.TabIndex = 0;
-            button1.Text = "Carregar Veiculos";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 142);
-            dataGridView1.Margin = new Padding(6);
+            dataGridView1.Location = new Point(14, 136);
+            dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1796, 235);
+            dataGridView1.Size = new Size(1105, 437);
             dataGridView1.TabIndex = 1;
+            // 
+            // Voltar
+            // 
+            Voltar.Location = new Point(14, 22);
+            Voltar.Name = "Voltar";
+            Voltar.Size = new Size(94, 29);
+            Voltar.TabIndex = 2;
+            Voltar.Text = "VOLTAR";
+            Voltar.UseVisualStyleBackColor = true;
+            Voltar.Click += button2_Click_1;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(236, 72);
+            button1.Name = "button1";
+            button1.Size = new Size(105, 43);
+            button1.TabIndex = 3;
+            button1.Text = "Comprados";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(347, 72);
+            button2.Name = "button2";
+            button2.Size = new Size(105, 43);
+            button2.TabIndex = 4;
+            button2.Text = "Vendidos";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(125, 72);
+            button3.Name = "button3";
+            button3.Size = new Size(105, 43);
+            button3.TabIndex = 5;
+            button3.Text = "Em Stock";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(458, 72);
+            button4.Name = "button4";
+            button4.Size = new Size(105, 43);
+            button4.TabIndex = 6;
+            button4.Text = "Retomas";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(14, 72);
+            button5.Name = "button5";
+            button5.Size = new Size(105, 43);
+            button5.TabIndex = 7;
+            button5.Text = "Todos";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(942, 80);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Procura";
+            textBox1.Size = new Size(177, 27);
+            textBox1.TabIndex = 8;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1848, 960);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(1137, 600);
+            Controls.Add(textBox1);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(button1);
-            Margin = new Padding(6);
+            Controls.Add(Voltar);
+            Controls.Add(dataGridView1);
+            Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
         private DataGridView dataGridView1;
+        private Button Voltar;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private TextBox textBox1;
     }
 }
