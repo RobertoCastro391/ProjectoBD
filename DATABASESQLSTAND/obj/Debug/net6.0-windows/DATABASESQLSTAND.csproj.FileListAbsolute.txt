@@ -1,0 +1,17 @@
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\bin\Debug\net6.0-windows\DATABASESQLSTAND.exe
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\bin\Debug\net6.0-windows\DATABASESQLSTAND.deps.json
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\bin\Debug\net6.0-windows\DATABASESQLSTAND.runtimeconfig.json
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\bin\Debug\net6.0-windows\DATABASESQLSTAND.dll
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\bin\Debug\net6.0-windows\DATABASESQLSTAND.pdb
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.csproj.AssemblyReference.cache
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Form1.resources
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.csproj.GenerateResource.cache
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.AssemblyInfoInputs.cache
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.AssemblyInfo.cs
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.csproj.CoreCompileInputs.cache
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.dll
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\refint\DATABASESQLSTAND.dll
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.pdb
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.genruntimeconfig.cache
+C:\Users\robertocastro\source\repos\DATABASESQLSTAND\DATABASESQLSTAND\obj\Debug\net6.0-windows\ref\DATABASESQLSTAND.dll
