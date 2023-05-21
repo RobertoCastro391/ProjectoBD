@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Clientes.cs">
+    <Compile Update="ClientesInterface.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
@@ -10,7 +10,7 @@
     <Compile Update="Fornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Funcionarios.cs">
+    <Compile Update="FuncionariosInterface.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Menu.cs">
@@ -22,7 +22,7 @@
     <Compile Update="Registo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Stands.cs">
+    <Compile Update="StandsInterface.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -1,27 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace DATABASESQLSTAND
 {
-    public partial class Clientes : Form
+    internal class Clientes
     {
-        public Clientes()
-        {
-            InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Menu menu = new Menu();
-            menu.Show(this);
-        }
+        public int? NIF { get; set; }
+        public string Nome_Cliente { get; set; }
+        public string Telefone { get; set; }
+        public string Endereço { get; set; }
+        public string Email { get; set; }
     }
+
 }

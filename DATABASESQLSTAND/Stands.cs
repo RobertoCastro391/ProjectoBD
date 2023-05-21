@@ -1,27 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace DATABASESQLSTAND
 {
-    public partial class Stands : Form
+    internal class Stands
     {
-        public Stands()
-        {
-            InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Menu menu = new Menu();
-            menu.Show(this);
-        }
+        public int? id_Stand { get; set; }
+        public string Nome_Stand { get; set; }
+        public string Endereço { get; set; }
+        public string Telefone { get; set; }
+        public string Email { get; set; }
     }
+
 }

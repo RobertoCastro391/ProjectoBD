@@ -26,21 +26,21 @@ namespace DATABASESQLSTAND
         private void STANDS_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Stands stands = new Stands();
+            StandsInterface stands = new StandsInterface();
             stands.Show(this);
         }
 
         private void CLIENTES_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Clientes clientes = new Clientes();
+            ClientesInterface clientes = new ClientesInterface();
             clientes.Show(this);
         }
 
         private void FUNCIONÁRIOS_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Funcionarios funcionarios = new Funcionarios();
+            FuncionariosInterface funcionarios = new FuncionariosInterface();
             funcionarios.Show(this);
         }
 
