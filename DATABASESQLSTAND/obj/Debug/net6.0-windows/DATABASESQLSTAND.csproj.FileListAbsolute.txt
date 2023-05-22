@@ -246,7 +246,6 @@ C:\Users\tiago\Documents\GitHub\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-win
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.csproj.AssemblyReference.cache
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Form1.resources
-\\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Fornecedores.resources
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Menu.resources
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Opçoes.resources
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Registo.resources
@@ -264,3 +263,4 @@ C:\Users\tiago\Documents\GitHub\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-win
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.ClientesInterface.resources
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.StandsInterface.resources
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FuncionariosInterface.resources
+\\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FornecedoresInterface.resources

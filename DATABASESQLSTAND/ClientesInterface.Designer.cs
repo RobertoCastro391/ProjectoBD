@@ -40,7 +40,7 @@
             // button1
             // 
             button1.Location = new Point(12, 14);
-            button1.Margin = new Padding(5, 5, 5, 5);
+            button1.Margin = new Padding(5);
             button1.Name = "button1";
             button1.Size = new Size(153, 46);
             button1.TabIndex = 0;
@@ -68,12 +68,14 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 186);
+            dataGridView1.Location = new Point(10, 184);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1276, 522);
+            dataGridView1.Size = new Size(1285, 573);
             dataGridView1.TabIndex = 8;
             // 
             // button4
@@ -96,19 +98,19 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // Clientes
+            // ClientesInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 720);
+            ClientSize = new Size(1305, 766);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Margin = new Padding(5, 5, 5, 5);
-            Name = "Clientes";
+            Margin = new Padding(5);
+            Name = "ClientesInterface";
             Text = "Clientes";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

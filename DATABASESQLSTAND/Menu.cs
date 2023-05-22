@@ -17,12 +17,6 @@ namespace DATABASESQLSTAND
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 veiculos = new Form1();
-            veiculos.Show(this);
-        }
         private void STANDS_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -47,7 +41,7 @@ namespace DATABASESQLSTAND
         private void FORNECEDORES_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Fornecedores fornecedores = new Fornecedores();
+            FornecedoresInterface fornecedores = new FornecedoresInterface();
             fornecedores.Show(this);
 
         }
@@ -65,6 +59,14 @@ namespace DATABASESQLSTAND
             this.Hide();
             Opçoes opcoes = new Opçoes();
             opcoes.Show(this);
+        }
+
+        private void VEICULOS_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 veiculos = new Form1();
+            veiculos.Show(this);
+
         }
     }
 }

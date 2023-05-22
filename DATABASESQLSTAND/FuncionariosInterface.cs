@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +17,17 @@ namespace DATABASESQLSTAND
         public FuncionariosInterface()
         {
             InitializeComponent();
-            FuncionariosDAO funcionariosDAO = new FuncionariosDAO();
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            SqlCommand cmd = new SqlCommand("SELECT STAND_Funcionario.NIF AS NIF, STAND_Entidade.nome AS Nome_Funcionário, STAND.Nome AS Nome_Stand, STAND_FuncaoStand.Funcao AS Função, STAND_Entidade.telefone AS Telefone, STAND_Entidade.endereco AS Endereço, STAND_Entidade.email AS Email FROM STAND_Funcionario INNER JOIN STAND_Entidade ON STAND_Funcionario.NIF = STAND_Entidade.NIF INNER JOIN STAND ON STAND.id = STAND_Funcionario.id_stand INNER JOIN STAND_FuncaoStand ON STAND_FuncaoStand.id = STAND_Funcionario.id_funcao", CN);
 
-            FuncionariosbindingSource.DataSource = funcionariosDAO.getAllFuncionarios();
-            dataGridView1.DataSource = FuncionariosbindingSource;
+            DataTable detailsTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+
+            sqlDataAdapter.Fill(detailsTable);
+            dataGridView1.DataSource = detailsTable;
+            dataGridView1.Visible = true;
+            CN.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,6 +35,24 @@ namespace DATABASESQLSTAND
             this.Hide();
             Menu menu = new Menu();
             menu.Show(this);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void FuncionariosInterface_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
