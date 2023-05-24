@@ -1,6 +1,6 @@
 ﻿namespace DATABASESQLSTAND
 {
-    partial class FuncionariosInterface
+    partial class CategoriasVeiculos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,87 +29,79 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
-            button4 = new Button();
-            button3 = new Button();
+            label1 = new Label();
+            textBox1 = new TextBox();
             button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(20, 19);
-            button1.Margin = new Padding(5);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(153, 46);
+            button1.Size = new Size(150, 46);
             button1.TabIndex = 0;
             button1.Text = "VOLTAR";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(960, 128);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Pesquisar";
-            textBox1.Size = new Size(330, 39);
-            textBox1.TabIndex = 10;
-            // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 182);
+            dataGridView1.Location = new Point(12, 79);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1278, 518);
-            dataGridView1.TabIndex = 9;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(1323, 327);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
             // 
-            // button4
+            // label1
             // 
-            button4.Location = new Point(235, 121);
-            button4.Name = "button4";
-            button4.Size = new Size(207, 46);
-            button4.TabIndex = 8;
-            button4.Text = "Adicionar";
-            button4.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(12, 446);
+            label1.Name = "label1";
+            label1.Size = new Size(189, 50);
+            label1.TabIndex = 2;
+            label1.Text = "Categoria:";
             // 
-            // button3
+            // textBox1
             // 
-            button3.Location = new Point(460, 121);
-            button3.Name = "button3";
-            button3.Size = new Size(207, 46);
-            button3.TabIndex = 7;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(218, 446);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(255, 59);
+            textBox1.TabIndex = 3;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button2
             // 
-            button2.Location = new Point(12, 121);
+            button2.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(520, 446);
             button2.Name = "button2";
-            button2.Size = new Size(207, 46);
-            button2.TabIndex = 6;
-            button2.Text = "Alterar";
+            button2.Size = new Size(177, 59);
+            button2.TabIndex = 4;
+            button2.Text = "Adicionar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // FuncionariosInterface
+            // CategoriasVeiculos
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1302, 716);
-            Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            ClientSize = new Size(1347, 672);
             Controls.Add(button2);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
-            Margin = new Padding(5);
-            Name = "FuncionariosInterface";
-            Text = "Funcionarios";
+            Name = "CategoriasVeiculos";
+            Text = "CategoriasVeiculos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -118,10 +110,9 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
         private DataGridView dataGridView1;
-        private Button button4;
-        private Button button3;
+        private Label label1;
+        private TextBox textBox1;
         private Button button2;
     }
 }

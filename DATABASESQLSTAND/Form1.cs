@@ -41,7 +41,7 @@ namespace DATABASESQLSTAND
         {
             SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
             CN.Open();
-            SqlCommand cmd = new SqlCommand("SELECT STAND_CompraVeiculo.NIF_Fornecedor, STAND_Entidade.nome AS Nome_Fornecedor,  STAND_CompraVeiculo.Matricula_Veiculo AS Matricula, STAND_MarcasCarros.Marca, STAND_Veiculos.Modelo, STAND_CorVeiculo.Cor , STAND_Veiculos.Cilindrada, STAND_Veiculos.Ano, STAND_Veiculos.Quilometros, STAND_Combustiveis.Combustivel, STAND_CategoriaVeiculos.Categoria, STAND_Veiculos.Preco_Anunciado,STAND.Nome AS Nome_Stand, STAND_Veiculos.Observações FROM STAND_CompraVeiculo INNER JOIN STAND_Veiculos ON STAND_Veiculos.Matricula = STAND_CompraVeiculo.Matricula_Veiculo INNER JOIN STAND_Entidade ON STAND_Entidade.NIF = STAND_CompraVeiculo.NIF_Fornecedor INNER JOIN STAND_MarcasCarros ON STAND_MarcasCarros.id = STAND_Veiculos.id_Marca INNER JOIN STAND ON STAND.id = STAND_Veiculos.id_Stand INNER JOIN STAND_CategoriaVeiculos ON STAND_CategoriaVeiculos.id = STAND_Veiculos.id_Categoria INNER JOIN STAND_CorVeiculo ON STAND_CorVeiculo.id = STAND_Veiculos.id_Cor INNER JOIN STAND_Combustiveis ON STAND_Combustiveis.id = STAND_Veiculos.id_Combustivel", CN);
+            SqlCommand cmd = new SqlCommand("SELECT STAND_CompraVeiculo.NIF_Fornecedor, STAND_Entidade.nome AS Nome_Fornecedor, STAND_CompraVeiculo.Data_movimento, STAND_CompraVeiculo.Matricula_Veiculo AS Matricula, STAND_MarcasCarros.Marca, STAND_Veiculos.Modelo, STAND_CorVeiculo.Cor , STAND_Veiculos.Cilindrada, STAND_Veiculos.Ano, STAND_Veiculos.Quilometros, STAND_Combustiveis.Combustivel, STAND_CategoriaVeiculos.Categoria, STAND_Veiculos.Preco_Anunciado,STAND.Nome AS Nome_Stand, STAND_Veiculos.Observações FROM STAND_CompraVeiculo INNER JOIN STAND_Veiculos ON STAND_Veiculos.Matricula = STAND_CompraVeiculo.Matricula_Veiculo INNER JOIN STAND_Entidade ON STAND_Entidade.NIF = STAND_CompraVeiculo.NIF_Fornecedor INNER JOIN STAND_MarcasCarros ON STAND_MarcasCarros.id = STAND_Veiculos.id_Marca INNER JOIN STAND ON STAND.id = STAND_Veiculos.id_Stand INNER JOIN STAND_CategoriaVeiculos ON STAND_CategoriaVeiculos.id = STAND_Veiculos.id_Categoria INNER JOIN STAND_CorVeiculo ON STAND_CorVeiculo.id = STAND_Veiculos.id_Cor INNER JOIN STAND_Combustiveis ON STAND_Combustiveis.id = STAND_Veiculos.id_Combustivel", CN);
 
             DataTable detailsTable = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
@@ -54,12 +54,32 @@ namespace DATABASESQLSTAND
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            SqlCommand cmd = new SqlCommand("SELECT STAND_VendaVeiculo.NIF_Vendedor, STAND_Entidade.nome AS Nome_Vendedor, STAND_VendaVeiculo.Data_movimento, STAND_VendaVeiculo.Matricula_Veiculo AS Matricula, STAND_MarcasCarros.Marca, STAND_Veiculos.Modelo, STAND_CorVeiculo.Cor , STAND_Veiculos.Cilindrada, STAND_Veiculos.Ano, STAND_Veiculos.Quilometros, STAND_Combustiveis.Combustivel, STAND_CategoriaVeiculos.Categoria, STAND_Veiculos.Preco_Anunciado,STAND.Nome AS Nome_Stand, STAND_Veiculos.Observações FROM STAND_VendaVeiculo INNER JOIN STAND_Veiculos ON STAND_Veiculos.Matricula = STAND_VendaVeiculo.Matricula_Veiculo INNER JOIN STAND_Entidade ON STAND_Entidade.NIF = STAND_VendaVeiculo.NIF_Vendedor INNER JOIN STAND_MarcasCarros ON STAND_MarcasCarros.id = STAND_Veiculos.id_Marca INNER JOIN STAND ON STAND.id = STAND_Veiculos.id_Stand INNER JOIN STAND_CategoriaVeiculos ON STAND_CategoriaVeiculos.id = STAND_Veiculos.id_Categoria INNER JOIN STAND_CorVeiculo ON STAND_CorVeiculo.id = STAND_Veiculos.id_Cor INNER JOIN STAND_Combustiveis ON STAND_Combustiveis.id = STAND_Veiculos.id_Combustivel", CN);
 
+            DataTable detailsTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+
+            sqlDataAdapter.Fill(detailsTable);
+            dataGridView1.DataSource = detailsTable;
+            dataGridView1.Visible = true;
+            CN.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            SqlCommand cmd = new SqlCommand("SELECT STAND_Veiculos.Matricula, STAND_MarcasCarros.Marca, STAND_Veiculos.Modelo, STAND_CorVeiculo.Cor, STAND_Veiculos.Cilindrada, STAND_Veiculos.Ano, STAND_Veiculos.Quilometros, STAND_Combustiveis.Combustivel, STAND_CategoriaVeiculos.Categoria, STAND_Veiculos.Preco_Anunciado, STAND.Nome, STAND_Veiculos.Observações FROM STAND_Veiculos INNER JOIN STAND_MarcasCarros ON STAND_MarcasCarros.id = STAND_Veiculos.id_Marca INNER JOIN STAND ON STAND.id = STAND_Veiculos.id_Stand INNER JOIN STAND_CategoriaVeiculos ON STAND_CategoriaVeiculos.id = STAND_Veiculos.id_Categoria INNER JOIN STAND_CorVeiculo ON STAND_CorVeiculo.id = STAND_Veiculos.id_Cor INNER JOIN STAND_Combustiveis ON STAND_Combustiveis.id = STAND_Veiculos.id_Combustivel WHERE NOT EXISTS ( SELECT 1 FROM STAND_VendaVeiculo WHERE STAND_VendaVeiculo.Matricula_Veiculo = STAND_Veiculos.Matricula );", CN);
 
+            DataTable detailsTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+
+            sqlDataAdapter.Fill(detailsTable);
+            dataGridView1.DataSource = detailsTable;
+            dataGridView1.Visible = true;
+            CN.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)

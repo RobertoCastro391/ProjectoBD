@@ -60,6 +60,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox1.Location = new Point(958, 128);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Pesquisar";
@@ -80,7 +81,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(282, 121);
+            button4.Location = new Point(235, 121);
             button4.Name = "button4";
             button4.Size = new Size(207, 46);
             button4.TabIndex = 7;
@@ -90,7 +91,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(579, 121);
+            button3.Location = new Point(460, 121);
             button3.Name = "button3";
             button3.Size = new Size(207, 46);
             button3.TabIndex = 6;

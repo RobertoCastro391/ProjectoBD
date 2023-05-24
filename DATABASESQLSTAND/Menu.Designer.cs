@@ -39,6 +39,7 @@
             // 
             // STANDS
             // 
+            STANDS.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             STANDS.Location = new Point(34, 157);
             STANDS.Margin = new Padding(5);
             STANDS.Name = "STANDS";
@@ -94,10 +95,11 @@
             // 
             // OPÇÕES
             // 
+            OPÇÕES.AutoSize = true;
             OPÇÕES.Location = new Point(830, 400);
             OPÇÕES.Margin = new Padding(5);
             OPÇÕES.Name = "OPÇÕES";
-            OPÇÕES.Size = new Size(275, 98);
+            OPÇÕES.Size = new Size(306, 98);
             OPÇÕES.TabIndex = 6;
             OPÇÕES.Text = "OPÇÕES";
             OPÇÕES.UseVisualStyleBackColor = true;
@@ -118,7 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 720);
+            ClientSize = new Size(1331, 720);
             Controls.Add(VEICULOS);
             Controls.Add(OPÇÕES);
             Controls.Add(REGISTO);
@@ -130,6 +132,7 @@
             Name = "Menu";
             Text = "Menu";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

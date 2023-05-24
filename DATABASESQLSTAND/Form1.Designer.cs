@@ -113,6 +113,7 @@ namespace DATABASESQLSTAND
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox1.Location = new Point(1531, 128);
             textBox1.Margin = new Padding(5);
             textBox1.Name = "textBox1";

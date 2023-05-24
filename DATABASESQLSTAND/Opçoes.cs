@@ -23,5 +23,29 @@ namespace DATABASESQLSTAND
             Menu menu = new Menu();
             menu.Show(this);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CategoriasVeiculos categoriasVeiculos = new CategoriasVeiculos();
+            categoriasVeiculos.Show(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CoresVeiculos corVeiculos = new CoresVeiculos();
+            corVeiculos.Show(this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void STANDS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

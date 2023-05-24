@@ -16,17 +16,7 @@ namespace DATABASESQLSTAND
         public ClientesInterface()
         {
             InitializeComponent();
-            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
-            CN.Open();
-            SqlCommand cmd = new SqlCommand("SELECT STAND_Cliente.NIF AS NIF, STAND_Entidade.nome AS Nome, STAND_Entidade.telefone AS Telefone, STAND_Entidade.endereco AS Endereço, STAND_Entidade.email As Email FROM STAND_Cliente INNER JOIN STAND_Entidade ON STAND_Cliente.NIF = STAND_Entidade.NIF\r\n\r\n", CN);
-
-            DataTable detailsTable = new DataTable();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-
-            sqlDataAdapter.Fill(detailsTable);
-            dataGridView1.DataSource = detailsTable;
-            dataGridView1.Visible = true;
-            CN.Close();
+            loadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,6 +41,21 @@ namespace DATABASESQLSTAND
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void loadData()
+        {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            SqlCommand cmd = new SqlCommand("SELECT STAND_Cliente.NIF AS NIF, STAND_Entidade.nome AS Nome, STAND_Entidade.telefone AS Telefone, STAND_Entidade.endereco AS Endereço, STAND_Entidade.email As Email FROM STAND_Cliente INNER JOIN STAND_Entidade ON STAND_Cliente.NIF = STAND_Entidade.NIF\r\n\r\n", CN);
+
+            DataTable detailsTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+
+            sqlDataAdapter.Fill(detailsTable);
+            dataGridView1.DataSource = detailsTable;
+            dataGridView1.Visible = true;
+            CN.Close();
         }
     }
 }
