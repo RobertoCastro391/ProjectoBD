@@ -19,7 +19,7 @@ namespace DATABASESQLSTAND
             InitializeComponent();
             SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
             CN.Open();
-            SqlCommand cmd = new SqlCommand("SELECT STAND_Funcionario.NIF AS NIF, STAND_Entidade.nome AS Nome_Funcionário, STAND.Nome AS Nome_Stand, STAND_FuncaoStand.Funcao AS Função, STAND_Entidade.telefone AS Telefone, STAND_Entidade.endereco AS Endereço, STAND_Entidade.email AS Email FROM STAND_Funcionario INNER JOIN STAND_Entidade ON STAND_Funcionario.NIF = STAND_Entidade.NIF INNER JOIN STAND ON STAND.id = STAND_Funcionario.id_stand INNER JOIN STAND_FuncaoStand ON STAND_FuncaoStand.id = STAND_Funcionario.id_funcao", CN);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM STAND_ViewFuncionarios", CN);
 
             DataTable detailsTable = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
@@ -54,5 +54,8 @@ namespace DATABASESQLSTAND
         {
 
         }
+
+
+
     }
 }

@@ -19,7 +19,7 @@ namespace DATABASESQLSTAND
             InitializeComponent();
             SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
             CN.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM STAND", CN);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM STAND_ViewStands", CN);
 
             DataTable detailsTable = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
