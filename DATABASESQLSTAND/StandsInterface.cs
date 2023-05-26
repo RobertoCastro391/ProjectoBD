@@ -43,18 +43,26 @@ namespace DATABASESQLSTAND
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (nome != "" && endereco != "" && telefone != "" && email != "") {
-                SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
-                CN.Open();
-                SqlCommand cmd = new SqlCommand("dbo.STAND_AdicionarStand", CN);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nome", nome);
-                cmd.Parameters.AddWithValue("@email", email);
-                cmd.Parameters.AddWithValue("@telefone", telefone);
-                cmd.Parameters.AddWithValue("@endereco", endereco);
-                cmd.ExecuteNonQuery();
-                CN.Close();
-                MessageBox.Show("Stand adicionado com sucesso!");
+            if (nome != "" && endereco != "" && telefone != "" && email != "")
+            {
+                try
+                {
+                    SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+                    CN.Open();
+                    SqlCommand cmd = new SqlCommand("dbo.STAND_AdicionarStand", CN);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@telefone", telefone);
+                    cmd.Parameters.AddWithValue("@endereco", endereco);
+                    cmd.ExecuteNonQuery();
+                    CN.Close();
+                    MessageBox.Show("Stand adicionado com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+                }
             }
             else
             {

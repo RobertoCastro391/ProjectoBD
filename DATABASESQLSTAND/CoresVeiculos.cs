@@ -53,14 +53,22 @@ namespace DATABASESQLSTAND
         {
             if (Cor_Veiculo != "")
             {
-                SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
-                CN.Open();
-                SqlCommand cmd = new SqlCommand("dbo.STAND_AdicionarCorVeiculo", CN);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@cor", Cor_Veiculo);
-                cmd.ExecuteNonQuery();
-                CN.Close();
-                MessageBox.Show("Cor adicionada com sucesso!");
+                try
+                {
+                    SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+                    CN.Open();
+                    SqlCommand cmd = new SqlCommand("dbo.STAND_AdicionarCorVeiculo", CN);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@cor", Cor_Veiculo);
+                    cmd.ExecuteNonQuery();
+                    CN.Close();
+                    MessageBox.Show("Cor adicionada com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+                }
+
             }
             else
             {

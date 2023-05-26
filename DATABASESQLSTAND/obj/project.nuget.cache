@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I2mokJV2/ZrvvXFFqNpvvEqL2rFQ0e71y2QYUJEszLQeo2Z3yi2y51SFGb9fPoJNgTxJjSudi4k0+QwE9Mg6tw==",
+  "dgSpecHash": "7i9ICcKwA4M28NDopLoXSLJMl8sCOg4OQCW550+iw3ZVHSpxLvKlEC4TmdV0jvCQdPoZl6aKd6MhTzs0SUf9ZA==",
   "success": true,
-  "projectFilePath": "\\\\Mac\\Home\\Desktop\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
+  "projectFilePath": "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\robertocastro\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\robertocastro\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

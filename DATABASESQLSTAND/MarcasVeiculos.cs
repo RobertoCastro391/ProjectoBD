@@ -44,13 +44,20 @@ namespace DATABASESQLSTAND
         {
             if (Marca_Veiculo != "")
             {
-                SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
-                CN.Open();
-                SqlCommand cmd = new SqlCommand("dbo.STAND_AdicionarMarca", CN);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@marca", Marca_Veiculo);
-                cmd.ExecuteNonQuery();
-                CN.Close();
+                try
+                {
+                    SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+                    CN.Open();
+                    SqlCommand cmd = new SqlCommand("dbo.STAND_AdicionarMarca", CN);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@marca", Marca_Veiculo);
+                    cmd.ExecuteNonQuery();
+                    CN.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+                }
             }
             else
             {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\Mac\\Home\\Desktop\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj": {}
+    "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj": {}
   },
   "projects": {
-    "\\\\Mac\\Home\\Desktop\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj": {
+    "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
+        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
         "projectName": "DATABASESQLSTAND",
-        "projectPath": "\\\\Mac\\Home\\Desktop\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
+        "projectPath": "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
         "packagesPath": "C:\\Users\\robertocastro\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Desktop\\ProjectoBD\\DATABASESQLSTAND\\obj\\",
+        "outputPath": "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\robertocastro\\AppData\\Roaming\\NuGet\\NuGet.Config",
