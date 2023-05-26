@@ -266,3 +266,6 @@ C:\Users\tiago\Documents\GitHub\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-win
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FornecedoresInterface.resources
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.CategoriasVeiculos.resources
 \\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.CoresVeiculos.resources
+\\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.LogIn.resources
+\\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.MarcasVeiculos.resources
+\\Mac\Home\Desktop\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FuncaoFuncionario.resources

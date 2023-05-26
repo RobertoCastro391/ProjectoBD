@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Opçoes));
             Voltar = new Button();
             STANDS = new Button();
             button1 = new Button();
@@ -38,7 +39,7 @@
             // Voltar
             // 
             Voltar.Location = new Point(20, 19);
-            Voltar.Margin = new Padding(5, 5, 5, 5);
+            Voltar.Margin = new Padding(5);
             Voltar.Name = "Voltar";
             Voltar.Size = new Size(153, 46);
             Voltar.TabIndex = 3;
@@ -48,8 +49,9 @@
             // 
             // STANDS
             // 
+            STANDS.Anchor = AnchorStyles.Left;
             STANDS.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            STANDS.Location = new Point(1011, 172);
+            STANDS.Location = new Point(1005, 101);
             STANDS.Margin = new Padding(5);
             STANDS.Name = "STANDS";
             STANDS.Size = new Size(275, 98);
@@ -60,8 +62,9 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Left;
             button1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button1.Location = new Point(683, 172);
+            button1.Location = new Point(677, 101);
             button1.Margin = new Padding(5);
             button1.Name = "button1";
             button1.Size = new Size(275, 98);
@@ -72,8 +75,9 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.Left;
             button2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button2.Location = new Point(352, 172);
+            button2.Location = new Point(346, 101);
             button2.Margin = new Padding(5);
             button2.Name = "button2";
             button2.Size = new Size(275, 98);
@@ -84,8 +88,9 @@
             // 
             // button3
             // 
+            button3.Anchor = AnchorStyles.Left;
             button3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button3.Location = new Point(20, 172);
+            button3.Location = new Point(14, 101);
             button3.Margin = new Padding(5);
             button3.Name = "button3";
             button3.Size = new Size(275, 98);
@@ -98,13 +103,14 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 720);
+            ClientSize = new Size(1300, 240);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(STANDS);
             Controls.Add(Voltar);
-            Margin = new Padding(5, 5, 5, 5);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(5);
             Name = "Opçoes";
             Text = "Opçoes";
             ResumeLayout(false);

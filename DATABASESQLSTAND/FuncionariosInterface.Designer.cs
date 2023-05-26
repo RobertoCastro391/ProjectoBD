@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuncionariosInterface));
             button1 = new Button();
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
@@ -51,7 +52,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(960, 128);
+            textBox1.Location = new Point(1448, 128);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Pesquisar";
             textBox1.Size = new Size(330, 39);
@@ -66,7 +67,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1278, 518);
+            dataGridView1.Size = new Size(1766, 518);
             dataGridView1.TabIndex = 9;
             // 
             // button4
@@ -100,13 +101,14 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1302, 716);
+            ClientSize = new Size(1790, 716);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
             Name = "FuncionariosInterface";
             Text = "Funcionarios";

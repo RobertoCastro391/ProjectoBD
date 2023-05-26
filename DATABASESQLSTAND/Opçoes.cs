@@ -40,12 +40,16 @@ namespace DATABASESQLSTAND
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MarcasVeiculos marcasVeiculos = new MarcasVeiculos();
+            marcasVeiculos.Show(this);
         }
 
         private void STANDS_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FuncaoFuncionario funcaoFuncionario = new FuncaoFuncionario();
+            funcaoFuncionario.Show(this);
         }
     }
 }

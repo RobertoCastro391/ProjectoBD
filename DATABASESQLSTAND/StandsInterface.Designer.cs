@@ -28,12 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StandsInterface));
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -83,35 +92,120 @@
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 186);
+            dataGridView1.Location = new Point(25, 186);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1276, 522);
+            dataGridView1.Size = new Size(1725, 445);
             dataGridView1.TabIndex = 4;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
             // 
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(958, 128);
+            textBox1.Location = new Point(1429, 128);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Pesquisar";
             textBox1.Size = new Size(330, 39);
             textBox1.TabIndex = 5;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(34, 668);
+            label2.Name = "label2";
+            label2.Size = new Size(131, 50);
+            label2.TabIndex = 7;
+            label2.Text = "Nome:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(34, 751);
+            label3.Name = "label3";
+            label3.Size = new Size(182, 50);
+            label3.TabIndex = 8;
+            label3.Text = "Endereço:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(828, 751);
+            label5.Name = "label5";
+            label5.Size = new Size(118, 50);
+            label5.TabIndex = 10;
+            label5.Text = "Email:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(828, 668);
+            label6.Name = "label6";
+            label6.Size = new Size(166, 50);
+            label6.TabIndex = 11;
+            label6.Text = "Telefone:";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(248, 668);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(420, 59);
+            textBox2.TabIndex = 12;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(248, 751);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(420, 59);
+            textBox3.TabIndex = 13;
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(1057, 751);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(420, 59);
+            textBox4.TabIndex = 14;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(1057, 668);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(420, 59);
+            textBox5.TabIndex = 15;
+            textBox5.TextChanged += textBox5_TextChanged;
+            // 
             // StandsInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 720);
+            ClientSize = new Size(1771, 839);
+            Controls.Add(textBox5);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
             Name = "StandsInterface";
             Text = "Stands";
@@ -128,5 +222,13 @@
         private Button button4;
         private DataGridView dataGridView1;
         private TextBox textBox1;
+        private Label label2;
+        private Label label3;
+        private Label label5;
+        private Label label6;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private TextBox textBox5;
     }
 }

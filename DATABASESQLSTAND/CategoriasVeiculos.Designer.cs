@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriasVeiculos));
             button1 = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
@@ -100,6 +101,7 @@
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CategoriasVeiculos";
             Text = "CategoriasVeiculos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

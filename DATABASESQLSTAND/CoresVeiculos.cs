@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace DATABASESQLSTAND
 {
     public partial class CoresVeiculos : Form
-    {  
+    {
         private string Cor_Veiculo = "";
         public CoresVeiculos()
         {
@@ -34,11 +34,8 @@ namespace DATABASESQLSTAND
                 // Get the selected row
                 DataGridViewRow row = dataGridView1.SelectedRows[0];
 
-                // Extract the category name from the selected row
-                string categoria = row.Cells["Cor"].Value.ToString();
-
                 // Set the category name in the textBox1 input field
-                textBox1.Text = categoria;
+                textBox1.Text = row.Cells["Cor"].Value.ToString();
             }
         }
 
@@ -63,9 +60,13 @@ namespace DATABASESQLSTAND
                 cmd.Parameters.AddWithValue("@cor", Cor_Veiculo);
                 cmd.ExecuteNonQuery();
                 CN.Close();
+                MessageBox.Show("Cor adicionada com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Por favor preencha a cor!");
             }
             loadData();
-
         }
 
         public void loadData()

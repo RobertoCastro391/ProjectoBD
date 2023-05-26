@@ -13,21 +13,15 @@ namespace DATABASESQLSTAND
 {
     public partial class StandsInterface : Form
     {
-        BindingSource StandsbindingSource = new BindingSource();
+        private string nome = "";
+        private string endereco = "";
+        private string telefone = "";
+        private string email = "";
+
         public StandsInterface()
         {
             InitializeComponent();
-            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
-            CN.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM STAND_ViewStands", CN);
-
-            DataTable detailsTable = new DataTable();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-
-            sqlDataAdapter.Fill(detailsTable);
-            dataGridView1.DataSource = detailsTable;
-            dataGridView1.Visible = true;
-            CN.Close();
+            loadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,7 +43,24 @@ namespace DATABASESQLSTAND
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            if (nome != "" && endereco != "" && telefone != "" && email != "") {
+                SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+                CN.Open();
+                SqlCommand cmd = new SqlCommand("dbo.STAND_AdicionarStand", CN);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@telefone", telefone);
+                cmd.Parameters.AddWithValue("@endereco", endereco);
+                cmd.ExecuteNonQuery();
+                CN.Close();
+                MessageBox.Show("Stand adicionado com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Por favor não deixe opções em branco!");
+            }
+            loadData();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -57,9 +68,54 @@ namespace DATABASESQLSTAND
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Get the selected row
+                DataGridViewRow row = dataGridView1.SelectedRows[0];
 
+                // Extract the category name from the selected row
+                textBox2.Text = row.Cells["Nome"].Value.ToString();
+                textBox3.Text = row.Cells["Endereco"].Value.ToString();
+                textBox5.Text = row.Cells["Telefone"].Value.ToString();
+                textBox4.Text = row.Cells["Email"].Value.ToString();
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            nome = textBox2.Text;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            endereco = textBox3.Text;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            telefone = textBox5.Text;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            email = textBox4.Text;
+        }
+
+        public void loadData()
+        {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM STAND_ViewStands", CN);
+
+            DataTable detailsTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+
+            sqlDataAdapter.Fill(detailsTable);
+            dataGridView1.DataSource = detailsTable;
+            dataGridView1.Visible = true;
+            CN.Close();
         }
     }
 }

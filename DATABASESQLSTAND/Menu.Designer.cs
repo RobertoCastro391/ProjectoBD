@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             STANDS = new Button();
             CLIENTES = new Button();
             FUNCIONÁRIOS = new Button();
@@ -128,6 +129,7 @@
             Controls.Add(FUNCIONÁRIOS);
             Controls.Add(CLIENTES);
             Controls.Add(STANDS);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
             Name = "Menu";
             Text = "Menu";

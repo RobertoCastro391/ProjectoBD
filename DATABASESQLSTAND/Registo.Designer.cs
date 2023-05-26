@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registo));
             Voltar = new Button();
             SuspendLayout();
             // 
             // Voltar
             // 
-            Voltar.Location = new Point(12, 12);
+            Voltar.Location = new Point(20, 19);
+            Voltar.Margin = new Padding(5, 5, 5, 5);
             Voltar.Name = "Voltar";
-            Voltar.Size = new Size(94, 29);
+            Voltar.Size = new Size(153, 46);
             Voltar.TabIndex = 3;
             Voltar.Text = "VOLTAR";
             Voltar.UseVisualStyleBackColor = true;
@@ -43,10 +45,12 @@
             // 
             // Registo
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1300, 720);
             Controls.Add(Voltar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(5, 5, 5, 5);
             Name = "Registo";
             Text = "Registo";
             ResumeLayout(false);

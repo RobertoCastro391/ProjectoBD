@@ -32,6 +32,7 @@ namespace DATABASESQLSTAND
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             dataGridView1 = new DataGridView();
             Voltar = new Button();
             button1 = new Button();
@@ -53,7 +54,7 @@ namespace DATABASESQLSTAND
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1793, 556);
+            dataGridView1.Size = new Size(2288, 879);
             dataGridView1.TabIndex = 1;
             // 
             // Voltar
@@ -114,7 +115,7 @@ namespace DATABASESQLSTAND
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(1531, 128);
+            textBox1.Location = new Point(2026, 128);
             textBox1.Margin = new Padding(5);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Procura";
@@ -137,7 +138,7 @@ namespace DATABASESQLSTAND
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1845, 817);
+            ClientSize = new Size(2340, 1140);
             Controls.Add(button6);
             Controls.Add(textBox1);
             Controls.Add(button4);
@@ -146,6 +147,7 @@ namespace DATABASESQLSTAND
             Controls.Add(button1);
             Controls.Add(Voltar);
             Controls.Add(dataGridView1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(6);
             Name = "Form1";
             Text = "Veículos";

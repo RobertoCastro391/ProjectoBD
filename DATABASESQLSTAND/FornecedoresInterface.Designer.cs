@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FornecedoresInterface));
             Voltar = new Button();
             button2 = new Button();
             button4 = new Button();
@@ -81,7 +82,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(1000, 127);
+            textBox1.Location = new Point(1488, 127);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Pesquisar";
             textBox1.Size = new Size(330, 39);
@@ -97,20 +98,21 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1318, 511);
+            dataGridView1.Size = new Size(1806, 511);
             dataGridView1.TabIndex = 12;
             // 
             // FornecedoresInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1342, 709);
+            ClientSize = new Size(1830, 709);
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button2);
             Controls.Add(Voltar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
             Name = "FornecedoresInterface";
             Text = "Fornecedores";
