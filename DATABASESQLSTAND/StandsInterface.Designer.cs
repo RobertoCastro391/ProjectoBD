@@ -43,6 +43,7 @@
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -194,11 +195,23 @@
             textBox5.TabIndex = 15;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
+            // comboBox1
+            // 
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "id", "Nome", "Endereco", "Telefone", "Email" });
+            comboBox1.Location = new Point(1023, 128);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(327, 40);
+            comboBox1.TabIndex = 16;
+            comboBox1.Text = "Filtrar";
+            // 
             // StandsInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1721, 840);
+            Controls.Add(comboBox1);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
@@ -238,5 +251,6 @@
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
+        private ComboBox comboBox1;
     }
 }

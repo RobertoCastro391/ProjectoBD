@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DATABASESQLSTAND
 {
@@ -33,7 +34,7 @@ namespace DATABASESQLSTAND
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -73,6 +74,17 @@ namespace DATABASESQLSTAND
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                string searchColumn = comboBox1.SelectedItem.ToString();
+                string searchText = textBox1.Text;
+                loadData(searchColumn, searchText);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+
+            }
 
         }
 
@@ -111,11 +123,18 @@ namespace DATABASESQLSTAND
             email = textBox4.Text;
         }
 
-        public void loadData()
+        public void loadData(string column = "", string searchText = "")
         {
             SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
             CN.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM STAND_ViewStands", CN);
+            string query = "SELECT * FROM STAND_ViewStands";
+
+            if (!string.IsNullOrEmpty(column) && !string.IsNullOrEmpty(searchText))
+            {
+                query += " WHERE " + column + " LIKE '%" + searchText + "%'";
+            }
+
+            SqlCommand cmd = new SqlCommand(query, CN);
 
             DataTable detailsTable = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);

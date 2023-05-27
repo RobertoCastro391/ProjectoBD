@@ -46,9 +46,10 @@
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
-            textBox6 = new TextBox();
             textBox7 = new TextBox();
-            textBox8 = new TextBox();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -66,11 +67,13 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(1617, 128);
+            textBox1.Location = new Point(1617, 121);
+            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Pesquisar";
-            textBox1.Size = new Size(330, 39);
+            textBox1.Size = new Size(330, 40);
             textBox1.TabIndex = 10;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // dataGridView1
             // 
@@ -163,7 +166,7 @@
             label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(1407, 715);
+            label5.Location = new Point(1383, 715);
             label5.Name = "label5";
             label5.Size = new Size(251, 45);
             label5.TabIndex = 15;
@@ -231,16 +234,6 @@
             textBox5.TabIndex = 21;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
-            // textBox6
-            // 
-            textBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox6.Location = new Point(1079, 722);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(273, 38);
-            textBox6.TabIndex = 22;
-            textBox6.TextChanged += textBox6_TextChanged;
-            // 
             // textBox7
             // 
             textBox7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -251,24 +244,46 @@
             textBox7.TabIndex = 23;
             textBox7.TextChanged += textBox7_TextChanged;
             // 
-            // textBox8
+            // comboBox1
             // 
-            textBox8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox8.Location = new Point(1664, 722);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(273, 38);
-            textBox8.TabIndex = 24;
-            textBox8.TextChanged += textBox8_TextChanged;
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "NIF", "Nome_Funcionário", "Nome_Stand", "Função", "Telefone", "Endereço", "Email" });
+            comboBox1.Location = new Point(1270, 121);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(327, 40);
+            comboBox1.TabIndex = 27;
+            comboBox1.Text = "Filtrar";
+            // 
+            // comboBox2
+            // 
+            comboBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(1640, 722);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(297, 40);
+            comboBox2.TabIndex = 28;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // comboBox3
+            // 
+            comboBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(1055, 722);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(297, 40);
+            comboBox3.TabIndex = 29;
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // FuncionariosInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1959, 892);
-            Controls.Add(textBox8);
+            Controls.Add(comboBox3);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(textBox7);
-            Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
@@ -314,8 +329,9 @@
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
-        private TextBox textBox6;
         private TextBox textBox7;
-        private TextBox textBox8;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
     }
 }

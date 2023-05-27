@@ -24,6 +24,8 @@ namespace DATABASESQLSTAND
         {
             InitializeComponent();
             loadData();
+            loadStandNames();
+            loadFuncaoFuncionario();
         }
 
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -36,8 +38,8 @@ namespace DATABASESQLSTAND
                 // Extract the category name from the selected row
                 textBox2.Text = row.Cells["NIF"].Value.ToString();
                 textBox3.Text = row.Cells["Nome_Funcionário"].Value.ToString();
-                textBox8.Text = row.Cells["Nome_Stand"].Value.ToString();
-                textBox6.Text = row.Cells["Função"].Value.ToString();
+                comboBox2.SelectedItem = row.Cells["Nome_Stand"].Value.ToString();
+                comboBox3.SelectedItem = row.Cells["Função"].Value.ToString();
                 textBox4.Text = row.Cells["Telefone"].Value.ToString();
                 textBox7.Text = row.Cells["Endereço"].Value.ToString();
                 textBox5.Text = row.Cells["Email"].Value.ToString();
@@ -92,6 +94,21 @@ namespace DATABASESQLSTAND
         {
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string searchColumn = comboBox1.SelectedItem.ToString();
+                string searchText = textBox1.Text;
+                loadData(searchColumn, searchText);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+
+            }
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             NIF = textBox2.Text;
@@ -112,26 +129,66 @@ namespace DATABASESQLSTAND
             email = textBox5.Text;
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-            funcaoFuncionario = textBox6.Text;
-        }
-
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             endereco = textBox7.Text;
         }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            nomeStand = textBox8.Text;
+            nomeStand = comboBox2.SelectedItem.ToString();
         }
 
-        public void loadData()
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            funcaoFuncionario = comboBox3.SelectedItem.ToString();
+        }
+
+        private void loadStandNames()
         {
             SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
             CN.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM STAND_ViewFuncionarios", CN);
+            SqlCommand cmd = new SqlCommand("SELECT Nome FROM STAND_ViewStands", CN);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string standName = reader["Nome"].ToString();
+                comboBox2.Items.Add(standName);
+            }
+
+            reader.Close();
+            CN.Close();
+        }
+
+        private void loadFuncaoFuncionario()
+        {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Funcao FROM STAND_ViewFuncaoFuncionarios", CN);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string funcao = reader["Funcao"].ToString();
+                comboBox3.Items.Add(funcao);
+            }
+
+            reader.Close();
+            CN.Close();
+        }
+
+        public void loadData(string column = "", string searchText = "")
+        {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            string query = "SELECT * FROM STAND_ViewFuncionarios";
+
+            if (!string.IsNullOrEmpty(column) && !string.IsNullOrEmpty(searchText))
+            {
+                query += " WHERE " + column + " LIKE '%" + searchText + "%'";
+            }
+
+            SqlCommand cmd = new SqlCommand(query, CN);
 
             DataTable detailsTable = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);

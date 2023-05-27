@@ -23,5 +23,26 @@ namespace DATABASESQLSTAND
             Menu menu = new Menu();
             menu.Show(this);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistoCompra registoCompra = new RegistoCompra();
+            registoCompra.Show(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistoVenda registoVenda = new RegistoVenda();
+            registoVenda.Show(this);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu menu = new Menu();
+            menu.Show(this);
+        }
     }
 }

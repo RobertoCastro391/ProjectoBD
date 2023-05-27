@@ -51,5 +51,12 @@ namespace DATABASESQLSTAND
             FuncaoFuncionario funcaoFuncionario = new FuncaoFuncionario();
             funcaoFuncionario.Show(this);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Combustiveis combustiveis = new Combustiveis();
+            combustiveis.Show(this);
+        }
     }
 }

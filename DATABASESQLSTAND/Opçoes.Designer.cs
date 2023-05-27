@@ -34,6 +34,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // Voltar
@@ -99,11 +100,25 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Left;
+            button4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button4.Location = new Point(1321, 101);
+            button4.Margin = new Padding(5);
+            button4.Name = "button4";
+            button4.Size = new Size(275, 98);
+            button4.TabIndex = 8;
+            button4.Text = "Combustíveis";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Opçoes
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 240);
+            ClientSize = new Size(1610, 240);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -123,5 +138,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button button4;
     }
 }

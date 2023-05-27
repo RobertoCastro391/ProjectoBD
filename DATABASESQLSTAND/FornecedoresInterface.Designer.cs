@@ -46,6 +46,7 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -94,10 +95,11 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(1414, 127);
+            textBox1.Location = new Point(1414, 124);
+            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Pesquisar";
-            textBox1.Size = new Size(330, 39);
+            textBox1.Size = new Size(330, 40);
             textBox1.TabIndex = 11;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -228,11 +230,23 @@
             textBox6.TabIndex = 24;
             textBox6.TextChanged += textBox6_TextChanged;
             // 
+            // comboBox1
+            // 
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "NIF", "nome", "telefone", "endereco", "email" });
+            comboBox1.Location = new Point(1071, 124);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(327, 40);
+            comboBox1.TabIndex = 28;
+            comboBox1.Text = "Filtrar";
+            // 
             // FornecedoresInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1756, 892);
+            Controls.Add(comboBox1);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
@@ -278,5 +292,6 @@
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
+        private ComboBox comboBox1;
     }
 }

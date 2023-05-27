@@ -45,6 +45,7 @@
             label2 = new Label();
             label1 = new Label();
             textBox6 = new TextBox();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -77,6 +78,7 @@
             textBox1.PlaceholderText = "Pesquisar";
             textBox1.Size = new Size(330, 39);
             textBox1.TabIndex = 9;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // dataGridView1
             // 
@@ -216,11 +218,23 @@
             textBox6.TabIndex = 25;
             textBox6.TextChanged += textBox6_TextChanged;
             // 
+            // comboBox1
+            // 
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "NIF", "Nome", "Telefone", "Endereço", "Email" });
+            comboBox1.Location = new Point(1065, 127);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(327, 40);
+            comboBox1.TabIndex = 26;
+            comboBox1.Text = "Filtrar";
+            // 
             // ClientesInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1771, 839);
+            Controls.Add(comboBox1);
             Controls.Add(textBox6);
             Controls.Add(label1);
             Controls.Add(textBox5);
@@ -264,5 +278,6 @@
         private Label label2;
         private Label label1;
         private TextBox textBox6;
+        private ComboBox comboBox1;
     }
 }
