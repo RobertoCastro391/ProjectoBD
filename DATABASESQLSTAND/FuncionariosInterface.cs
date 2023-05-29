@@ -198,5 +198,47 @@ namespace DATABASESQLSTAND
             dataGridView1.Visible = true;
             CN.Close();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (NIF != "" && nomeFuncionario != "" && nomeStand != "" && funcaoFuncionario != "" && endereco != "" && telefone != "" && email != "")
+            {
+                try
+                {
+                    SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+                    CN.Open();
+                    SqlCommand cmd = new SqlCommand("dbo.STAND_EliminarFuncionário", CN);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@NIF", NIF);
+                    cmd.ExecuteNonQuery();
+                    CN.Close();
+                    MessageBox.Show("Funcionário eliminado com sucesso!");
+
+                    NIF = "";
+                    nomeFuncionario = "";
+                    nomeStand = "";
+                    funcaoFuncionario = "";
+                    endereco = "";
+                    telefone = "";
+                    email = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox7.Text = "";
+                    comboBox2.SelectedItem = "Stand";
+                    comboBox3.SelectedItem = "Função";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor não deixe opções em branco!");
+            }
+            loadData();
+        }
     }
 }

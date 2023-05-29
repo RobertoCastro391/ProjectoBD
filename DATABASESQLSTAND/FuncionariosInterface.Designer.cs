@@ -107,6 +107,7 @@
             button3.TabIndex = 7;
             button3.Text = "Eliminar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
             // 
             // button2
             // 
@@ -263,6 +264,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(297, 40);
             comboBox2.TabIndex = 28;
+            comboBox2.Text = "Stand";
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox3
@@ -273,6 +275,7 @@
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(297, 40);
             comboBox3.TabIndex = 29;
+            comboBox3.Text = "Função";
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // FuncionariosInterface
