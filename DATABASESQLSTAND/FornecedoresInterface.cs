@@ -25,6 +25,7 @@ namespace DATABASESQLSTAND
         {
             InitializeComponent();
             loadData();
+            dataGridView1.CellClick += DataGridView1_CellClick;
         }
 
         private void Voltar_Click(object sender, EventArgs e)
@@ -90,12 +91,12 @@ namespace DATABASESQLSTAND
         {
         }
 
-        private void DataGridView1_SelectionChanged(object sender, EventArgs e)
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (e.RowIndex >= 0)
             {
                 // Get the selected row
-                DataGridViewRow row = dataGridView1.SelectedRows[0];
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
                 // Extract the category name from the selected row
                 textBox2.Text = row.Cells["NIF"].Value.ToString();

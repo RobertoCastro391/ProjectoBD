@@ -1,5 +1,6 @@
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace DATABASESQLSTAND
 {
@@ -19,6 +20,13 @@ namespace DATABASESQLSTAND
         private string preco_anunciado = "";
         private string nomeStand = "";
         private string obs = "";
+        private string nif_fornecedor = "";
+        private string nome_fornecedor = "";
+        private string data_movimento = "";
+        private string nif_funcionario = "";
+        private string nome_funcionario = "";
+        private string nif_cliente = "";
+        private string nome_cliente = "";
 
         public Form1()
         {
@@ -29,6 +37,7 @@ namespace DATABASESQLSTAND
             loadCombustiveis();
             loadCategorias();
             loadStandNames();
+            dataGridView1.CellClick += DataGridView1_CellClick;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,12 +56,16 @@ namespace DATABASESQLSTAND
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            panel1.Visible = true;
+            panel2.Visible = false;
             lastButtonIndex = 1; // Set the last button index to 1
             loadDataComprados();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = true;
             lastButtonIndex = 2; // Set the last button index to 2
             loadDataVendidos();
         }
@@ -60,6 +73,8 @@ namespace DATABASESQLSTAND
         private void button3_Click(object sender, EventArgs e)
         {
             lastButtonIndex = 3; // Set the last button index to 3
+            panel1.Visible = false;
+            panel2.Visible = false;
             loadDataEmStock();
         }
 
@@ -70,7 +85,11 @@ namespace DATABASESQLSTAND
         private void button6_Click(object sender, EventArgs e)
         {
             lastButtonIndex = -1; // Set the last button index to -1 (no button pressed)
+            panel1.Visible = false;
+            panel2.Visible = false;
             loadDataTodos();
+            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -102,12 +121,12 @@ namespace DATABASESQLSTAND
             }
         }
 
-        private void DataGridView1_SelectionChanged(object sender, EventArgs e)
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (e.RowIndex >= 0)
             {
                 // Get the selected row
-                DataGridViewRow row = dataGridView1.SelectedRows[0];
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
                 // Extract the category name from the selected row
                 textBox2.Text = row.Cells["Matricula"].Value.ToString();
@@ -122,6 +141,23 @@ namespace DATABASESQLSTAND
                 textBox11.Text = row.Cells["Preco_Anunciado"].Value.ToString();
                 comboBox6.SelectedItem = row.Cells["Nome_Stand"].Value.ToString();
                 textBox13.Text = row.Cells["Observações"].Value.ToString();
+
+                if (panel1.Visible == true)
+                {
+                    textBox17.Text = row.Cells["NIF_Fornecedor"].Value.ToString();
+                    textBox18.Text = row.Cells["Nome_Fornecedor"].Value.ToString();
+                    textBox19.Text = row.Cells["Data_movimento"].Value.ToString();
+                }
+
+                if (panel2.Visible == true)
+                {
+                    textBox8.Text = row.Cells["NIF_Vendedor"].Value.ToString();
+                    textBox5.Text = row.Cells["Nome_Vendedor"].Value.ToString();
+                    textBox14.Text = row.Cells["NIF_Cliente"].Value.ToString();
+                    textBox12.Text = row.Cells["Nome_Cliente"].Value.ToString();
+                    textBox3.Text = row.Cells["Data_movimento"].Value.ToString();
+                }
+
             }
         }
 
@@ -359,6 +395,46 @@ namespace DATABASESQLSTAND
 
             reader.Close();
             CN.Close();
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+            nif_fornecedor = textBox17.Text;
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+            nome_fornecedor = textBox18.Text;
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+            data_movimento = textBox19.Text;
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            nif_funcionario = textBox8.Text;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            nome_funcionario = textBox5.Text;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            data_movimento = textBox3.Text;
+        }
+
+        private void textBox14_TextChanged(object sender, EventArgs e)
+        {
+            nif_cliente = textBox14.Text;
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            nome_cliente = textBox12.Text;
         }
     }
 }

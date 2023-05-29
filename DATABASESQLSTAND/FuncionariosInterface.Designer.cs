@@ -87,7 +87,6 @@
             dataGridView1.ScrollBars = ScrollBars.Horizontal;
             dataGridView1.Size = new Size(1935, 480);
             dataGridView1.TabIndex = 9;
-            dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
             // 
             // button4
             // 
