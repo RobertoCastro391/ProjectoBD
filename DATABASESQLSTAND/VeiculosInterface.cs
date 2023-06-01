@@ -1,10 +1,11 @@
 using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DATABASESQLSTAND
 {
-    public partial class Form1 : Form
+    public partial class VeiculosInterface : Form
     {
         private int lastButtonIndex = -1;
 
@@ -28,7 +29,7 @@ namespace DATABASESQLSTAND
         private string nif_cliente = "";
         private string nome_cliente = "";
 
-        public Form1()
+        public VeiculosInterface()
         {
             InitializeComponent();
             loadDataTodos();
@@ -80,6 +81,10 @@ namespace DATABASESQLSTAND
 
         private void button4_Click(object sender, EventArgs e)
         {
+            panel1.Visible = true;
+            panel2.Visible = false;
+            lastButtonIndex = 4;
+            loadDataRetomados();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -88,7 +93,7 @@ namespace DATABASESQLSTAND
             panel1.Visible = false;
             panel2.Visible = false;
             loadDataTodos();
-            
+
 
         }
 
@@ -109,6 +114,9 @@ namespace DATABASESQLSTAND
                         break;
                     case 3:
                         loadDataEmStock(searchColumn, searchText);
+                        break;
+                    case 4:
+                        loadDataRetomados(searchColumn, searchText);
                         break;
                     default:
                         loadDataTodos(searchColumn, searchText);
@@ -312,6 +320,29 @@ namespace DATABASESQLSTAND
             CN.Close();
         }
 
+        public void loadDataRetomados(string column = "", string searchText = "")
+        {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            string query = "SELECT * FROM STAND_ViewVeiculosRetomados";
+
+            // Modify the query if column and search text are provided
+            if (!string.IsNullOrEmpty(column) && !string.IsNullOrEmpty(searchText))
+            {
+                query += " WHERE " + column + " LIKE '%" + searchText + "%'";
+            }
+
+            SqlCommand cmd = new SqlCommand(query, CN);
+
+            DataTable detailsTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+
+            sqlDataAdapter.Fill(detailsTable);
+            dataGridView1.DataSource = detailsTable;
+            dataGridView1.Visible = true;
+            CN.Close();
+        }
+
         private void loadStandNames()
         {
             SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
@@ -435,6 +466,74 @@ namespace DATABASESQLSTAND
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
             nome_cliente = textBox12.Text;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (matricula != "" && marca != "" && modelo != "" && cor != "" && cilindrada != "" && ano != "" && quilometros != "" && combustivel != "" && categoria != "" && preco_anunciado != "" && nomeStand != "" && obs != "")
+            {
+                try
+                {
+                    SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+                    CN.Open();
+                    SqlCommand cmd = new SqlCommand("STAND_AlterarCarro", CN);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@matricula", matricula);
+                    cmd.Parameters.AddWithValue("@marca", marca);
+                    cmd.Parameters.AddWithValue("@modelo", modelo);
+                    cmd.Parameters.AddWithValue("@cor", cor);
+                    cmd.Parameters.AddWithValue("@cilindrada", int.Parse(cilindrada));
+                    cmd.Parameters.AddWithValue("@ano", int.Parse(ano));
+                    cmd.Parameters.AddWithValue("@km", int.Parse(quilometros));
+                    cmd.Parameters.AddWithValue("@combustivel", combustivel);
+                    cmd.Parameters.AddWithValue("@categoria", categoria);
+                    cmd.Parameters.AddWithValue("@preco_anunciado", decimal.Parse(preco_anunciado));
+                    cmd.Parameters.AddWithValue("@stand", nomeStand);
+                    cmd.Parameters.AddWithValue("@observações", obs);
+                    cmd.ExecuteNonQuery();
+                    CN.Close();
+                    MessageBox.Show("Veículo alterado com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor não deixe opções em branco!");
+            }
+            switch (lastButtonIndex)
+            {
+                case 1:
+                    loadDataComprados();
+                    break;
+                case 2:
+                    loadDataVendidos();
+                    break;
+                case 3:
+                    loadDataEmStock();
+                    break;
+                default:
+                    loadDataTodos();
+                    break;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(matricula))
+            {
+                this.Hide();
+                RegistoVenda registoVenda = new RegistoVenda();
+                registoVenda.matricula = matricula;
+                registoVenda.vendaFromVeiculos(matricula);
+                registoVenda.Show(this);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione um veículo para venda.");
+            }
         }
     }
 }

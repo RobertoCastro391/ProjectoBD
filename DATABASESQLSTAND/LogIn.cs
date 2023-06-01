@@ -43,7 +43,6 @@ namespace DATABASESQLSTAND
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection CN = new SqlConnection("data source = " + textBox1.Text + "; Initial Catalog = " + textBox2.Text + "; uid = " + textBox2.Text + "; password = " + textBox3.Text + "; TrustServerCertificate=true");
-
             try
             {
                 CN.Open();

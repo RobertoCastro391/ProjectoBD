@@ -87,9 +87,6 @@ namespace DATABASESQLSTAND
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -183,6 +180,37 @@ namespace DATABASESQLSTAND
             dataGridView1.DataSource = detailsTable;
             dataGridView1.Visible = true;
             CN.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (NIF != "" && nomeFornecedor != "" && telefone != "" && endereco != "" && email != "")
+            {
+                try
+                {
+                    SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+                    CN.Open();
+                    SqlCommand cmd = new SqlCommand("STAND_AlterarFornecedor", CN);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@NIF", NIF);
+                    cmd.Parameters.AddWithValue("@nome", nomeFornecedor);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@telefone", telefone);
+                    cmd.Parameters.AddWithValue("@endereco", endereco);
+                    cmd.ExecuteNonQuery();
+                    CN.Close();
+                    MessageBox.Show("Funcionário alterado com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor não deixe opções em branco!");
+            }
+            loadData();
         }
     }
 }

@@ -64,7 +64,7 @@ namespace DATABASESQLSTAND
         private void VEICULOS_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 veiculos = new Form1();
+            VeiculosInterface veiculos = new VeiculosInterface();
             veiculos.Show(this);
 
         }

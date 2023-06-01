@@ -4,7 +4,7 @@ using System.Drawing.Printing;
 
 namespace DATABASESQLSTAND
 {
-    partial class Form1
+    partial class VeiculosInterface
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,7 +32,7 @@ namespace DATABASESQLSTAND
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VeiculosInterface));
             dataGridView1 = new DataGridView();
             Voltar = new Button();
             button1 = new Button();
@@ -85,6 +85,8 @@ namespace DATABASESQLSTAND
             label14 = new Label();
             textBox8 = new TextBox();
             label15 = new Label();
+            button7 = new Button();
+            button8 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -100,7 +102,7 @@ namespace DATABASESQLSTAND
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(2288, 696);
+            dataGridView1.Size = new Size(2311, 485);
             dataGridView1.TabIndex = 1;
             // 
             // Voltar
@@ -161,7 +163,7 @@ namespace DATABASESQLSTAND
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(1976, 128);
+            textBox1.Location = new Point(1991, 39);
             textBox1.Margin = new Padding(5);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
@@ -186,7 +188,7 @@ namespace DATABASESQLSTAND
             comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Matricula", "Marca", "Modelo", "Cor", "Cilindrada", "Ano", "Quilometros", "Combustivel", "Categoria", "Preco_Anunciado", "Nome", "Observações" });
-            comboBox1.Location = new Point(1632, 128);
+            comboBox1.Location = new Point(1647, 39);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(327, 40);
             comboBox1.TabIndex = 29;
@@ -197,7 +199,7 @@ namespace DATABASESQLSTAND
             label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(23, 918);
+            label1.Location = new Point(23, 719);
             label1.Name = "label1";
             label1.Size = new Size(159, 45);
             label1.TabIndex = 30;
@@ -208,7 +210,7 @@ namespace DATABASESQLSTAND
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(23, 993);
+            label2.Location = new Point(23, 794);
             label2.Name = "label2";
             label2.Size = new Size(114, 45);
             label2.TabIndex = 31;
@@ -219,7 +221,7 @@ namespace DATABASESQLSTAND
             label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(23, 1070);
+            label3.Location = new Point(23, 871);
             label3.Name = "label3";
             label3.Size = new Size(138, 45);
             label3.TabIndex = 32;
@@ -230,7 +232,7 @@ namespace DATABASESQLSTAND
             label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(544, 918);
+            label4.Location = new Point(544, 719);
             label4.Name = "label4";
             label4.Size = new Size(77, 45);
             label4.TabIndex = 33;
@@ -241,7 +243,7 @@ namespace DATABASESQLSTAND
             label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(544, 993);
+            label5.Location = new Point(544, 794);
             label5.Name = "label5";
             label5.Size = new Size(170, 45);
             label5.TabIndex = 34;
@@ -252,7 +254,7 @@ namespace DATABASESQLSTAND
             label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(1106, 993);
+            label6.Location = new Point(1106, 794);
             label6.Name = "label6";
             label6.Size = new Size(204, 45);
             label6.TabIndex = 35;
@@ -263,7 +265,7 @@ namespace DATABASESQLSTAND
             label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(1106, 918);
+            label7.Location = new Point(1106, 719);
             label7.Name = "label7";
             label7.Size = new Size(204, 45);
             label7.TabIndex = 36;
@@ -274,7 +276,7 @@ namespace DATABASESQLSTAND
             label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(544, 1070);
+            label8.Location = new Point(544, 871);
             label8.Name = "label8";
             label8.Size = new Size(85, 45);
             label8.TabIndex = 37;
@@ -285,7 +287,7 @@ namespace DATABASESQLSTAND
             label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(1689, 993);
+            label9.Location = new Point(1689, 794);
             label9.Name = "label9";
             label9.Size = new Size(204, 45);
             label9.TabIndex = 38;
@@ -296,7 +298,7 @@ namespace DATABASESQLSTAND
             label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(1689, 918);
+            label10.Location = new Point(1689, 719);
             label10.Name = "label10";
             label10.Size = new Size(107, 45);
             label10.TabIndex = 39;
@@ -307,7 +309,7 @@ namespace DATABASESQLSTAND
             label11.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(1106, 1070);
+            label11.Location = new Point(1106, 871);
             label11.Name = "label11";
             label11.Size = new Size(164, 45);
             label11.TabIndex = 40;
@@ -318,7 +320,7 @@ namespace DATABASESQLSTAND
             label12.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(1689, 1070);
+            label12.Location = new Point(1689, 871);
             label12.Name = "label12";
             label12.Size = new Size(208, 45);
             label12.TabIndex = 41;
@@ -327,7 +329,7 @@ namespace DATABASESQLSTAND
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox2.Location = new Point(188, 925);
+            textBox2.Location = new Point(188, 726);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(273, 40);
@@ -337,7 +339,7 @@ namespace DATABASESQLSTAND
             // textBox4
             // 
             textBox4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox4.Location = new Point(188, 1002);
+            textBox4.Location = new Point(188, 878);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(273, 40);
@@ -347,7 +349,7 @@ namespace DATABASESQLSTAND
             // textBox6
             // 
             textBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox6.Location = new Point(724, 1077);
+            textBox6.Location = new Point(724, 878);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(273, 40);
@@ -357,7 +359,7 @@ namespace DATABASESQLSTAND
             // textBox7
             // 
             textBox7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox7.Location = new Point(724, 1000);
+            textBox7.Location = new Point(724, 801);
             textBox7.Multiline = true;
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(273, 40);
@@ -367,7 +369,7 @@ namespace DATABASESQLSTAND
             // textBox10
             // 
             textBox10.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox10.Location = new Point(1331, 925);
+            textBox10.Location = new Point(1331, 726);
             textBox10.Multiline = true;
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(273, 40);
@@ -377,7 +379,7 @@ namespace DATABASESQLSTAND
             // textBox11
             // 
             textBox11.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox11.Location = new Point(1914, 925);
+            textBox11.Location = new Point(1914, 726);
             textBox11.Multiline = true;
             textBox11.Name = "textBox11";
             textBox11.Size = new Size(273, 40);
@@ -387,10 +389,10 @@ namespace DATABASESQLSTAND
             // textBox13
             // 
             textBox13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox13.Location = new Point(1914, 1077);
+            textBox13.Location = new Point(1914, 878);
             textBox13.Multiline = true;
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(397, 88);
+            textBox13.Size = new Size(397, 189);
             textBox13.TabIndex = 53;
             textBox13.TextChanged += textBox13_TextChanged;
             // 
@@ -398,7 +400,7 @@ namespace DATABASESQLSTAND
             // 
             comboBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(188, 1077);
+            comboBox2.Location = new Point(188, 801);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(273, 40);
             comboBox2.TabIndex = 54;
@@ -408,7 +410,7 @@ namespace DATABASESQLSTAND
             // 
             comboBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(724, 925);
+            comboBox3.Location = new Point(724, 726);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(273, 40);
             comboBox3.TabIndex = 55;
@@ -418,7 +420,7 @@ namespace DATABASESQLSTAND
             // 
             comboBox4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(1331, 1075);
+            comboBox4.Location = new Point(1331, 876);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(273, 40);
             comboBox4.TabIndex = 56;
@@ -428,7 +430,7 @@ namespace DATABASESQLSTAND
             // 
             comboBox5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(1331, 1000);
+            comboBox5.Location = new Point(1331, 801);
             comboBox5.Name = "comboBox5";
             comboBox5.Size = new Size(273, 40);
             comboBox5.TabIndex = 57;
@@ -438,7 +440,7 @@ namespace DATABASESQLSTAND
             // 
             comboBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBox6.FormattingEnabled = true;
-            comboBox6.Location = new Point(1914, 998);
+            comboBox6.Location = new Point(1914, 799);
             comboBox6.Name = "comboBox6";
             comboBox6.Size = new Size(273, 40);
             comboBox6.TabIndex = 58;
@@ -514,13 +516,14 @@ namespace DATABASESQLSTAND
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.Controls.Add(textBox19);
             panel1.Controls.Add(label27);
             panel1.Controls.Add(textBox18);
             panel1.Controls.Add(label26);
             panel1.Controls.Add(textBox17);
             panel1.Controls.Add(label23);
-            panel1.Location = new Point(23, 1069);
+            panel1.Location = new Point(26, 927);
             panel1.Name = "panel1";
             panel1.Size = new Size(1669, 69);
             panel1.TabIndex = 59;
@@ -539,16 +542,16 @@ namespace DATABASESQLSTAND
             panel2.Controls.Add(label14);
             panel2.Controls.Add(textBox8);
             panel2.Controls.Add(label15);
-            panel2.Location = new Point(12, 1053);
+            panel2.Location = new Point(23, 927);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1680, 140);
+            panel2.Size = new Size(1671, 140);
             panel2.TabIndex = 60;
             panel2.Visible = false;
             // 
             // textBox12
             // 
             textBox12.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox12.Location = new Point(908, 87);
+            textBox12.Location = new Point(857, 87);
             textBox12.Multiline = true;
             textBox12.Name = "textBox12";
             textBox12.Size = new Size(273, 40);
@@ -560,7 +563,7 @@ namespace DATABASESQLSTAND
             label17.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(600, 80);
+            label17.Location = new Point(628, 80);
             label17.Name = "label17";
             label17.Size = new Size(223, 45);
             label17.TabIndex = 98;
@@ -581,7 +584,7 @@ namespace DATABASESQLSTAND
             label18.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(3, 80);
+            label18.Location = new Point(70, 80);
             label18.Name = "label18";
             label18.Size = new Size(184, 45);
             label18.TabIndex = 96;
@@ -590,7 +593,7 @@ namespace DATABASESQLSTAND
             // textBox3
             // 
             textBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox3.Location = new Point(1366, 24);
+            textBox3.Location = new Point(1308, 24);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(273, 40);
@@ -602,7 +605,7 @@ namespace DATABASESQLSTAND
             label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(1264, 17);
+            label13.Location = new Point(1195, 19);
             label13.Name = "label13";
             label13.Size = new Size(92, 45);
             label13.TabIndex = 94;
@@ -611,7 +614,7 @@ namespace DATABASESQLSTAND
             // textBox5
             // 
             textBox5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox5.Location = new Point(908, 24);
+            textBox5.Location = new Point(857, 24);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(273, 40);
@@ -623,7 +626,7 @@ namespace DATABASESQLSTAND
             label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(600, 17);
+            label14.Location = new Point(561, 17);
             label14.Name = "label14";
             label14.Size = new Size(290, 45);
             label14.TabIndex = 92;
@@ -650,13 +653,39 @@ namespace DATABASESQLSTAND
             label15.TabIndex = 90;
             label15.Text = "NIF Funcionário:";
             // 
-            // Form1
+            // button7
+            // 
+            button7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button7.Location = new Point(1632, 115);
+            button7.Margin = new Padding(5);
+            button7.Name = "button7";
+            button7.Size = new Size(342, 69);
+            button7.TabIndex = 61;
+            button7.Text = "Alterar Dados Veículos";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button8.Location = new Point(1984, 115);
+            button8.Margin = new Padding(5);
+            button8.Name = "button8";
+            button8.Size = new Size(342, 69);
+            button8.TabIndex = 62;
+            button8.Text = "Vender este Veículo";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // VeiculosInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(2340, 1205);
+            ClientSize = new Size(2340, 1079);
+            Controls.Add(button8);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(button7);
             Controls.Add(comboBox6);
             Controls.Add(comboBox5);
             Controls.Add(comboBox4);
@@ -692,7 +721,7 @@ namespace DATABASESQLSTAND
             Controls.Add(dataGridView1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(6);
-            Name = "Form1";
+            Name = "VeiculosInterface";
             Text = "Veículos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
@@ -757,5 +786,7 @@ namespace DATABASESQLSTAND
         private Label label17;
         private TextBox textBox14;
         private Label label18;
+        private Button button7;
+        private Button button8;
     }
 }

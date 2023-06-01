@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FornecedoresInterface));
             Voltar = new Button();
-            button2 = new Button();
             button4 = new Button();
             button3 = new Button();
             textBox1 = new TextBox();
@@ -47,6 +46,7 @@
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             comboBox1 = new ComboBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -60,16 +60,6 @@
             Voltar.Text = "VOLTAR";
             Voltar.UseVisualStyleBackColor = true;
             Voltar.Click += Voltar_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(20, 120);
-            button2.Name = "button2";
-            button2.Size = new Size(207, 46);
-            button2.TabIndex = 7;
-            button2.Text = "Alterar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // button4
             // 
@@ -240,11 +230,23 @@
             comboBox1.TabIndex = 28;
             comboBox1.Text = "Filtrar";
             // 
+            // button1
+            // 
+            button1.AutoSize = true;
+            button1.Location = new Point(20, 118);
+            button1.Name = "button1";
+            button1.Size = new Size(207, 46);
+            button1.TabIndex = 29;
+            button1.Text = "Alterar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // FornecedoresInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1756, 892);
+            Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
@@ -261,7 +263,6 @@
             Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(button4);
-            Controls.Add(button2);
             Controls.Add(Voltar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
@@ -292,5 +293,6 @@
         private TextBox textBox5;
         private TextBox textBox6;
         private ComboBox comboBox1;
+        private Button button1;
     }
 }

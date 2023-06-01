@@ -36,7 +36,33 @@ namespace DATABASESQLSTAND
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (nome != "" && endereco != "" && telefone != "" && email != "")
+            {
+                try
+                {
+                    SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+                    CN.Open();
+                    SqlCommand cmd = new SqlCommand("STAND_AlterarCliente", CN);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@NIF", NIF);
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@telefone", telefone);
+                    cmd.Parameters.AddWithValue("@endereco", endereco);
+                    cmd.ExecuteNonQuery();
+                    CN.Close();
+                    MessageBox.Show("Stand alterado com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor não deixe opções em branco!");
+            }
+            loadData();
         }
 
         private void button4_Click(object sender, EventArgs e)

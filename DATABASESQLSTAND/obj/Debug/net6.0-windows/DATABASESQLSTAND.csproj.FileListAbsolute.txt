@@ -317,7 +317,6 @@ C:\Users\tiago\Documents\GitHub\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-win
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.CategoriasVeiculos.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.ClientesInterface.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.CoresVeiculos.resources
-\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Form1.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FornecedoresInterface.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FuncaoFuncionario.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FuncionariosInterface.resources
@@ -342,3 +341,4 @@ C:\Users\tiago\Documents\GitHub\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-win
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoCompra.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoRetoma.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoVenda.resources
+\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.VeiculosInterface.resources
