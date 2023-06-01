@@ -33,7 +33,6 @@
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
             button4 = new Button();
-            button3 = new Button();
             button2 = new Button();
             label1 = new Label();
             label2 = new Label();
@@ -97,16 +96,6 @@
             button4.Text = "Adicionar";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click_1;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(460, 121);
-            button3.Name = "button3";
-            button3.Size = new Size(207, 46);
-            button3.TabIndex = 7;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click_1;
             // 
             // button2
             // 
@@ -301,7 +290,6 @@
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button4);
-            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -319,7 +307,6 @@
         private TextBox textBox1;
         private DataGridView dataGridView1;
         private Button button4;
-        private Button button3;
         private Button button2;
         private Label label1;
         private Label label2;

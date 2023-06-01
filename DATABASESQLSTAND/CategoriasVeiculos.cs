@@ -24,8 +24,8 @@ namespace DATABASESQLSTAND
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Menu menu = new Menu();
-            menu.Show(this);
+            Opçoes opçoes = new Opçoes();
+            opçoes.Show(this);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

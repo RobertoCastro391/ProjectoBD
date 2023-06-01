@@ -535,5 +535,21 @@ namespace DATABASESQLSTAND
                 MessageBox.Show("Por favor, selecione um veículo para venda.");
             }
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(matricula))
+            {
+                this.Hide();
+                RegistoRetoma registoRetoma = new RegistoRetoma();
+                registoRetoma.matricula = matricula;
+                registoRetoma.retomaFromVeiculos(matricula);
+                registoRetoma.Show(this);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione um veículo para venda.");
+            }
+        }
     }
 }

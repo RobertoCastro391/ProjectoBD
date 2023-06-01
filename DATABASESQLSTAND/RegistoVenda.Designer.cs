@@ -40,7 +40,6 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label9 = new Label();
-            textBox3 = new TextBox();
             button2 = new Button();
             button1 = new Button();
             textBox19 = new TextBox();
@@ -51,6 +50,7 @@
             label4 = new Label();
             textBox7 = new TextBox();
             label5 = new Label();
+            comboBox2 = new ComboBox();
             SuspendLayout();
             // 
             // Voltar
@@ -175,25 +175,13 @@
             label9.TabIndex = 112;
             label9.Text = "Nome Stand:";
             // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox3.BackColor = SystemColors.Window;
-            textBox3.Location = new Point(816, 153);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(273, 40);
-            textBox3.TabIndex = 113;
-            textBox3.TextChanged += textBox3_TextChanged;
-            // 
             // button2
             // 
             button2.Location = new Point(1089, 501);
             button2.Name = "button2";
             button2.Size = new Size(161, 93);
             button2.TabIndex = 115;
-            button2.Text = "Efetuar Compra";
+            button2.Text = "Efetuar Venda";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -292,11 +280,23 @@
             label5.TabIndex = 122;
             label5.Text = "Preço Venda:";
             // 
+            // comboBox2
+            // 
+            comboBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(816, 153);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(273, 40);
+            comboBox2.TabIndex = 134;
+            comboBox2.Text = "Stand";
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
             // RegistoVenda
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1262, 606);
+            Controls.Add(comboBox2);
             Controls.Add(textBox7);
             Controls.Add(label5);
             Controls.Add(textBox5);
@@ -307,7 +307,6 @@
             Controls.Add(label23);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox3);
             Controls.Add(label9);
             Controls.Add(textBox1);
             Controls.Add(textBox6);
@@ -339,7 +338,6 @@
         private Label label2;
         private TextBox textBox1;
         private Label label9;
-        private TextBox textBox3;
         private Button button2;
         private Button button1;
         private TextBox textBox19;
@@ -350,5 +348,6 @@
         private Label label4;
         private TextBox textBox7;
         private Label label5;
+        private ComboBox comboBox2;
     }
 }

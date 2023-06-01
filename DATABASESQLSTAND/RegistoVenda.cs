@@ -30,6 +30,7 @@ namespace DATABASESQLSTAND
         public RegistoVenda()
         {
             InitializeComponent();
+            loadStandNames();
         }
 
         public void vendaFromVeiculos(string matricula)
@@ -97,7 +98,6 @@ namespace DATABASESQLSTAND
                 textBox1.Clear();
                 textBox4.Clear();
                 textBox6.Clear();
-                textBox3.Clear();
             }
             else
             {
@@ -119,12 +119,6 @@ namespace DATABASESQLSTAND
         {
             modelo = textBox4.Text;
         }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            nomeStand = textBox3.Text;
-        }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             ano = textBox6.Text;
@@ -169,7 +163,7 @@ namespace DATABASESQLSTAND
                                 textBox1.Text = marca;
                                 textBox4.Text = modelo;
                                 textBox6.Text = ano;
-                                textBox3.Text = nomeStand;
+                                comboBox2.Text = nomeStand;
                             }
                             else
                             {
@@ -179,6 +173,28 @@ namespace DATABASESQLSTAND
                     }
                 }
             }
+        }
+
+        private void loadStandNames()
+        {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Nome FROM STAND_ViewStands", CN);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string standName = reader["Nome"].ToString();
+                comboBox2.Items.Add(standName);
+            }
+
+            reader.Close();
+            CN.Close();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nomeStand = comboBox2.SelectedItem.ToString();
         }
     }
 }

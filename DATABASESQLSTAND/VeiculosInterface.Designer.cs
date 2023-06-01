@@ -87,6 +87,7 @@ namespace DATABASESQLSTAND
             label15 = new Label();
             button7 = new Button();
             button8 = new Button();
+            button9 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -656,7 +657,7 @@ namespace DATABASESQLSTAND
             // button7
             // 
             button7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button7.Location = new Point(1632, 115);
+            button7.Location = new Point(1280, 112);
             button7.Margin = new Padding(5);
             button7.Name = "button7";
             button7.Size = new Size(342, 69);
@@ -668,7 +669,7 @@ namespace DATABASESQLSTAND
             // button8
             // 
             button8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button8.Location = new Point(1984, 115);
+            button8.Location = new Point(1632, 112);
             button8.Margin = new Padding(5);
             button8.Name = "button8";
             button8.Size = new Size(342, 69);
@@ -677,11 +678,24 @@ namespace DATABASESQLSTAND
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
+            // button9
+            // 
+            button9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button9.Location = new Point(1984, 112);
+            button9.Margin = new Padding(5);
+            button9.Name = "button9";
+            button9.Size = new Size(342, 69);
+            button9.TabIndex = 63;
+            button9.Text = "Retoma deste Veículo";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
             // VeiculosInterface
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2340, 1079);
+            Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -788,5 +802,6 @@ namespace DATABASESQLSTAND
         private Label label18;
         private Button button7;
         private Button button8;
+        private Button button9;
     }
 }

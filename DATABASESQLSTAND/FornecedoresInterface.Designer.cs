@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FornecedoresInterface));
             Voltar = new Button();
             button4 = new Button();
-            button3 = new Button();
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
             label2 = new Label();
@@ -71,16 +70,6 @@
             button4.Text = "Adicionar";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(491, 120);
-            button3.Name = "button3";
-            button3.Size = new Size(207, 46);
-            button3.TabIndex = 10;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // textBox1
             // 
@@ -261,7 +250,6 @@
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
-            Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(Voltar);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -278,7 +266,6 @@
         private Button Voltar;
         private Button button2;
         private Button button4;
-        private Button button3;
         private TextBox textBox1;
         private DataGridView dataGridView1;
         private Label label2;

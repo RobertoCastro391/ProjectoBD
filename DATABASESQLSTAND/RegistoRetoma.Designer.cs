@@ -39,7 +39,6 @@
             textBox2 = new TextBox();
             label3 = new Label();
             label1 = new Label();
-            textBox3 = new TextBox();
             label9 = new Label();
             textBox19 = new TextBox();
             label27 = new Label();
@@ -51,6 +50,7 @@
             label6 = new Label();
             button2 = new Button();
             button1 = new Button();
+            comboBox2 = new ComboBox();
             SuspendLayout();
             // 
             // Voltar
@@ -62,6 +62,7 @@
             Voltar.TabIndex = 5;
             Voltar.Text = "VOLTAR";
             Voltar.UseVisualStyleBackColor = true;
+            Voltar.Click += Voltar_Click;
             // 
             // textBox1
             // 
@@ -162,18 +163,6 @@
             label1.Size = new Size(499, 50);
             label1.TabIndex = 112;
             label1.Text = "Registar Retoma de Veículo";
-            // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox3.BackColor = SystemColors.Window;
-            textBox3.Location = new Point(852, 152);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(273, 40);
-            textBox3.TabIndex = 122;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label9
             // 
@@ -277,7 +266,7 @@
             button2.Name = "button2";
             button2.Size = new Size(161, 93);
             button2.TabIndex = 132;
-            button2.Text = "Efetuar Compra";
+            button2.Text = "Efetuar Retoma";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -291,11 +280,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // comboBox2
+            // 
+            comboBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(852, 152);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(273, 40);
+            comboBox2.TabIndex = 133;
+            comboBox2.Text = "Stand";
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
             // RegistoRetoma
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1262, 606);
+            Controls.Add(comboBox2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox8);
@@ -306,7 +307,6 @@
             Controls.Add(label5);
             Controls.Add(textBox19);
             Controls.Add(label27);
-            Controls.Add(textBox3);
             Controls.Add(label9);
             Controls.Add(textBox1);
             Controls.Add(textBox6);
@@ -337,7 +337,6 @@
         private TextBox textBox2;
         private Label label3;
         private Label label1;
-        private TextBox textBox3;
         private Label label9;
         private TextBox textBox19;
         private Label label27;
@@ -349,5 +348,6 @@
         private Label label6;
         private Button button2;
         private Button button1;
+        private ComboBox comboBox2;
     }
 }

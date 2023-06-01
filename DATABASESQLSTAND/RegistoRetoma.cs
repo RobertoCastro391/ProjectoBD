@@ -28,6 +28,7 @@ namespace DATABASESQLSTAND
         public RegistoRetoma()
         {
             InitializeComponent();
+            loadStandNames();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,6 +36,11 @@ namespace DATABASESQLSTAND
             this.Hide();
             VeiculosInterface veiculosInterface = new VeiculosInterface();
             veiculosInterface.Show();
+        }
+
+        public void retomaFromVeiculos(string matricula)
+        {
+            textBox2.Text = matricula;
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -89,6 +95,11 @@ namespace DATABASESQLSTAND
             }
         }
 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nomeStand = comboBox2.SelectedItem.ToString();
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             marca = textBox1.Text;
@@ -108,12 +119,6 @@ namespace DATABASESQLSTAND
         {
             data = textBox19.Text;
         }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            nomeStand = textBox3.Text;
-        }
-
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             quilometros = textBox8.Text;
@@ -127,6 +132,23 @@ namespace DATABASESQLSTAND
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             precoVenda = textBox7.Text;
+        }
+
+        private void loadStandNames()
+        {
+            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+            CN.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Nome FROM STAND_ViewStands", CN);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string standName = reader["Nome"].ToString();
+                comboBox2.Items.Add(standName);
+            }
+
+            reader.Close();
+            CN.Close();
         }
 
         public void loadDadosVeiculos(string matricula)
@@ -162,6 +184,13 @@ namespace DATABASESQLSTAND
                     }
                 }
             }
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registo registo = new Registo();
+            registo.Show();
         }
     }
 }

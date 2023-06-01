@@ -51,7 +51,7 @@ namespace DATABASESQLSTAND
                     cmd.Parameters.AddWithValue("@endereco", endereco);
                     cmd.ExecuteNonQuery();
                     CN.Close();
-                    MessageBox.Show("Stand alterado com sucesso!");
+                    MessageBox.Show("Cliente alterado com sucesso!");
                 }
                 catch (Exception ex)
                 {
@@ -96,43 +96,43 @@ namespace DATABASESQLSTAND
             loadData();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (NIF != "" && nome != "" && endereco != "" && telefone != "" && email != "")
-            {
-                try
-                {
-                    SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
-                    CN.Open();
-                    SqlCommand cmd = new SqlCommand("dbo.STAND_EliminarCliente", CN);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@NIF", NIF);
-                    cmd.ExecuteNonQuery();
-                    CN.Close();
-                    MessageBox.Show("Cliente eliminado com sucesso!");
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    if (NIF != "" && nome != "" && endereco != "" && telefone != "" && email != "")
+        //    {
+        //        try
+        //        {
+        //            SqlConnection CN = new SqlConnection("data source = tcp:mednat.ieeta.pt\\SQLSERVER,8101; Initial Catalog = p8g4; uid = p8g4; password = TiagoBerto.2021; TrustServerCertificate=true");
+        //            CN.Open();
+        //            SqlCommand cmd = new SqlCommand("dbo.STAND_EliminarCliente", CN);
+        //            cmd.CommandType = CommandType.StoredProcedure;
+        //            cmd.Parameters.AddWithValue("@NIF", NIF);
+        //            cmd.ExecuteNonQuery();
+        //            CN.Close();
+        //            MessageBox.Show("Cliente eliminado com sucesso!");
 
-                    NIF = "";
-                    nome = "";
-                    endereco = "";
-                    telefone = "";
-                    email = "";
-                    textBox2.Text = "";
-                    textBox3.Text = "";
-                    textBox4.Text = "";
-                    textBox5.Text = "";
-                    textBox6.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor não deixe opções em branco!");
-            }
-            loadData();
-        }
+        //            NIF = "";
+        //            nome = "";
+        //            endereco = "";
+        //            telefone = "";
+        //            email = "";
+        //            textBox2.Text = "";
+        //            textBox3.Text = "";
+        //            textBox4.Text = "";
+        //            textBox5.Text = "";
+        //            textBox6.Text = "";
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show("Erro: \r\n" + ex.Message, "ERRO", MessageBoxButtons.OK);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Por favor não deixe opções em branco!");
+        //    }
+        //    loadData();
+        //}
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
