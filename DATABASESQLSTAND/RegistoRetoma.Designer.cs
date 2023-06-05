@@ -40,7 +40,6 @@
             label3 = new Label();
             label1 = new Label();
             label9 = new Label();
-            textBox19 = new TextBox();
             label27 = new Label();
             textBox7 = new TextBox();
             label5 = new Label();
@@ -51,6 +50,7 @@
             button2 = new Button();
             button1 = new Button();
             comboBox2 = new ComboBox();
+            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
             // Voltar
@@ -68,7 +68,7 @@
             // 
             textBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             textBox1.BackColor = SystemColors.Window;
-            textBox1.Location = new Point(196, 215);
+            textBox1.Location = new Point(196, 206);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
@@ -80,7 +80,7 @@
             // 
             textBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             textBox6.BackColor = SystemColors.Window;
-            textBox6.Location = new Point(196, 359);
+            textBox6.Location = new Point(196, 350);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
             textBox6.ReadOnly = true;
@@ -93,7 +93,7 @@
             label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(84, 352);
+            label8.Location = new Point(84, 343);
             label8.Name = "label8";
             label8.Size = new Size(85, 45);
             label8.TabIndex = 118;
@@ -104,7 +104,7 @@
             label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(31, 277);
+            label13.Location = new Point(31, 268);
             label13.Name = "label13";
             label13.Size = new Size(138, 45);
             label13.TabIndex = 117;
@@ -114,7 +114,7 @@
             // 
             textBox4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             textBox4.BackColor = SystemColors.Window;
-            textBox4.Location = new Point(196, 284);
+            textBox4.Location = new Point(196, 275);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
@@ -127,7 +127,7 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(61, 208);
+            label2.Location = new Point(61, 199);
             label2.Name = "label2";
             label2.Size = new Size(114, 45);
             label2.TabIndex = 115;
@@ -136,7 +136,7 @@
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox2.Location = new Point(196, 152);
+            textBox2.Location = new Point(196, 143);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(273, 40);
@@ -148,7 +148,7 @@
             label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(16, 145);
+            label3.Location = new Point(16, 136);
             label3.Name = "label3";
             label3.Size = new Size(159, 45);
             label3.TabIndex = 113;
@@ -169,29 +169,18 @@
             label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(624, 145);
+            label9.Location = new Point(624, 136);
             label9.Name = "label9";
             label9.Size = new Size(204, 45);
             label9.TabIndex = 121;
             label9.Text = "Nome Stand:";
-            // 
-            // textBox19
-            // 
-            textBox19.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox19.Location = new Point(196, 427);
-            textBox19.Multiline = true;
-            textBox19.Name = "textBox19";
-            textBox19.PlaceholderText = "AAAA-MM-DD";
-            textBox19.Size = new Size(273, 40);
-            textBox19.TabIndex = 124;
-            textBox19.TextChanged += textBox19_TextChanged;
             // 
             // label27
             // 
             label27.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label27.AutoSize = true;
             label27.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label27.Location = new Point(80, 420);
+            label27.Location = new Point(80, 411);
             label27.Name = "label27";
             label27.Size = new Size(92, 45);
             label27.TabIndex = 123;
@@ -200,7 +189,7 @@
             // textBox7
             // 
             textBox7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox7.Location = new Point(852, 353);
+            textBox7.Location = new Point(852, 344);
             textBox7.Multiline = true;
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(273, 40);
@@ -212,7 +201,7 @@
             label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(579, 346);
+            label5.Location = new Point(579, 337);
             label5.Name = "label5";
             label5.Size = new Size(249, 45);
             label5.TabIndex = 125;
@@ -221,7 +210,7 @@
             // textBox5
             // 
             textBox5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox5.Location = new Point(852, 284);
+            textBox5.Location = new Point(852, 275);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(273, 40);
@@ -233,7 +222,7 @@
             label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(554, 277);
+            label4.Location = new Point(554, 268);
             label4.Name = "label4";
             label4.Size = new Size(274, 45);
             label4.TabIndex = 127;
@@ -242,7 +231,7 @@
             // textBox8
             // 
             textBox8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox8.Location = new Point(852, 215);
+            textBox8.Location = new Point(852, 206);
             textBox8.Multiline = true;
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(273, 40);
@@ -254,7 +243,7 @@
             label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(624, 208);
+            label6.Location = new Point(624, 199);
             label6.Name = "label6";
             label6.Size = new Size(204, 45);
             label6.TabIndex = 129;
@@ -262,7 +251,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(1089, 501);
+            button2.Location = new Point(964, 492);
             button2.Name = "button2";
             button2.Size = new Size(161, 93);
             button2.TabIndex = 132;
@@ -272,7 +261,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(876, 501);
+            button1.Location = new Point(751, 492);
             button1.Name = "button1";
             button1.Size = new Size(161, 93);
             button1.TabIndex = 131;
@@ -284,18 +273,31 @@
             // 
             comboBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(852, 152);
+            comboBox2.Location = new Point(852, 143);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(273, 40);
             comboBox2.TabIndex = 133;
             comboBox2.Text = "Stand";
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(196, 416);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(273, 39);
+            dateTimePicker1.TabIndex = 134;
+            dateTimePicker1.Value = new DateTime(2023, 6, 22, 0, 0, 0, 0);
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
             // RegistoRetoma
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1262, 606);
+            ClientSize = new Size(1154, 597);
+            Controls.Add(dateTimePicker1);
             Controls.Add(comboBox2);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -305,7 +307,6 @@
             Controls.Add(label4);
             Controls.Add(textBox7);
             Controls.Add(label5);
-            Controls.Add(textBox19);
             Controls.Add(label27);
             Controls.Add(label9);
             Controls.Add(textBox1);
@@ -338,7 +339,6 @@
         private Label label3;
         private Label label1;
         private Label label9;
-        private TextBox textBox19;
         private Label label27;
         private TextBox textBox7;
         private Label label5;
@@ -349,5 +349,6 @@
         private Button button2;
         private Button button1;
         private ComboBox comboBox2;
+        private DateTimePicker dateTimePicker1;
     }
 }

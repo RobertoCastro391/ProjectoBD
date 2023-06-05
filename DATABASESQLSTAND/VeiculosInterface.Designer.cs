@@ -72,14 +72,14 @@ namespace DATABASESQLSTAND
             label26 = new Label();
             textBox18 = new TextBox();
             label27 = new Label();
-            textBox19 = new TextBox();
             panel1 = new Panel();
+            dateTimePicker2 = new DateTimePicker();
             panel2 = new Panel();
+            dateTimePicker1 = new DateTimePicker();
             textBox12 = new TextBox();
             label17 = new Label();
             textBox14 = new TextBox();
             label18 = new Label();
-            textBox3 = new TextBox();
             label13 = new Label();
             textBox5 = new TextBox();
             label14 = new Label();
@@ -505,20 +505,10 @@ namespace DATABASESQLSTAND
             label27.TabIndex = 88;
             label27.Text = "Data:";
             // 
-            // textBox19
-            // 
-            textBox19.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox19.Location = new Point(1382, 12);
-            textBox19.Multiline = true;
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(273, 40);
-            textBox19.TabIndex = 89;
-            textBox19.TextChanged += textBox19_TextChanged;
-            // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            panel1.Controls.Add(textBox19);
+            panel1.Controls.Add(dateTimePicker2);
             panel1.Controls.Add(label27);
             panel1.Controls.Add(textBox18);
             panel1.Controls.Add(label26);
@@ -530,24 +520,48 @@ namespace DATABASESQLSTAND
             panel1.TabIndex = 59;
             panel1.Visible = false;
             // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            dateTimePicker2.CustomFormat = "yyyy/MM/dd";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.Location = new Point(1378, 10);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(273, 39);
+            dateTimePicker2.TabIndex = 101;
+            dateTimePicker2.Value = new DateTime(2023, 6, 22, 0, 0, 0, 0);
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
+            // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            panel2.Controls.Add(dateTimePicker1);
             panel2.Controls.Add(textBox12);
             panel2.Controls.Add(label17);
             panel2.Controls.Add(textBox14);
             panel2.Controls.Add(label18);
-            panel2.Controls.Add(textBox3);
             panel2.Controls.Add(label13);
             panel2.Controls.Add(textBox5);
             panel2.Controls.Add(label14);
             panel2.Controls.Add(textBox8);
             panel2.Controls.Add(label15);
-            panel2.Location = new Point(23, 927);
+            panel2.Location = new Point(26, 927);
             panel2.Name = "panel2";
             panel2.Size = new Size(1671, 140);
             panel2.TabIndex = 60;
             panel2.Visible = false;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(1308, 22);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(273, 39);
+            dateTimePicker1.TabIndex = 100;
+            dateTimePicker1.Value = new DateTime(2023, 6, 22, 0, 0, 0, 0);
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // textBox12
             // 
@@ -590,16 +604,6 @@ namespace DATABASESQLSTAND
             label18.Size = new Size(184, 45);
             label18.TabIndex = 96;
             label18.Text = "NIF Cliente:";
-            // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox3.Location = new Point(1308, 24);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(273, 40);
-            textBox3.TabIndex = 95;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label13
             // 
@@ -787,10 +791,8 @@ namespace DATABASESQLSTAND
         private Label label26;
         private TextBox textBox18;
         private Label label27;
-        private TextBox textBox19;
         private Panel panel1;
         private Panel panel2;
-        private TextBox textBox3;
         private Label label13;
         private TextBox textBox5;
         private Label label14;
@@ -803,5 +805,7 @@ namespace DATABASESQLSTAND
         private Button button7;
         private Button button8;
         private Button button9;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
     }
 }

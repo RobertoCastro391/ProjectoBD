@@ -42,8 +42,6 @@
             label9 = new Label();
             button2 = new Button();
             button1 = new Button();
-            textBox19 = new TextBox();
-            label27 = new Label();
             textBox17 = new TextBox();
             label23 = new Label();
             textBox5 = new TextBox();
@@ -51,6 +49,8 @@
             textBox7 = new TextBox();
             label5 = new Label();
             comboBox2 = new ComboBox();
+            label6 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
             // Voltar
@@ -177,7 +177,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(1089, 501);
+            button2.Location = new Point(928, 501);
             button2.Name = "button2";
             button2.Size = new Size(161, 93);
             button2.TabIndex = 115;
@@ -187,35 +187,13 @@
             // 
             // button1
             // 
-            button1.Location = new Point(876, 501);
+            button1.Location = new Point(715, 501);
             button1.Name = "button1";
             button1.Size = new Size(161, 93);
             button1.TabIndex = 114;
             button1.Text = "Ver Veículos";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // textBox19
-            // 
-            textBox19.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            textBox19.Location = new Point(816, 216);
-            textBox19.Multiline = true;
-            textBox19.Name = "textBox19";
-            textBox19.PlaceholderText = "AAAA-MM-DD";
-            textBox19.Size = new Size(273, 40);
-            textBox19.TabIndex = 119;
-            textBox19.TextChanged += textBox19_TextChanged;
-            // 
-            // label27
-            // 
-            label27.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            label27.AutoSize = true;
-            label27.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label27.Location = new Point(700, 209);
-            label27.Name = "label27";
-            label27.Size = new Size(92, 45);
-            label27.TabIndex = 118;
-            label27.Text = "Data:";
             // 
             // textBox17
             // 
@@ -291,18 +269,41 @@
             comboBox2.Text = "Stand";
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(700, 209);
+            label6.Name = "label6";
+            label6.Size = new Size(92, 45);
+            label6.TabIndex = 137;
+            label6.Text = "Data:";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(816, 214);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(273, 39);
+            dateTimePicker1.TabIndex = 138;
+            dateTimePicker1.Value = new DateTime(2023, 6, 22, 0, 0, 0, 0);
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
             // RegistoVenda
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1262, 606);
+            ClientSize = new Size(1111, 606);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(label6);
             Controls.Add(comboBox2);
             Controls.Add(textBox7);
             Controls.Add(label5);
             Controls.Add(textBox5);
             Controls.Add(label4);
-            Controls.Add(textBox19);
-            Controls.Add(label27);
             Controls.Add(textBox17);
             Controls.Add(label23);
             Controls.Add(button2);
@@ -340,7 +341,6 @@
         private Label label9;
         private Button button2;
         private Button button1;
-        private TextBox textBox19;
         private Label label27;
         private TextBox textBox17;
         private Label label23;
@@ -349,5 +349,7 @@
         private TextBox textBox7;
         private Label label5;
         private ComboBox comboBox2;
+        private Label label6;
+        private DateTimePicker dateTimePicker1;
     }
 }

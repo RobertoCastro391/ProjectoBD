@@ -54,10 +54,9 @@ namespace DATABASESQLSTAND
             VeiculosInterface veiculosInterface = new VeiculosInterface();
             veiculosInterface.Show(this);
         }
-
-        private void textBox19_TextChanged(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            data_movimento = textBox19.Text;
+            data_movimento = dateTimePicker1.Value.ToString("yyyy/MM/dd");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

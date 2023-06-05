@@ -54,6 +54,7 @@ namespace DATABASESQLSTAND
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             if (matricula != "" && nomeStand != "" && data != "" && precoVenda != "" && nif_vendedor != "" && nif_cliente != "")
             {
                 try
@@ -123,10 +124,6 @@ namespace DATABASESQLSTAND
         {
             ano = textBox6.Text;
         }
-        private void textBox19_TextChanged(object sender, EventArgs e)
-        {
-            data = textBox19.Text;
-        }
 
         private void textBox17_TextChanged(object sender, EventArgs e)
         {
@@ -195,6 +192,11 @@ namespace DATABASESQLSTAND
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             nomeStand = comboBox2.SelectedItem.ToString();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            data = dateTimePicker1.Value.ToString("yyyy/MM/dd");
         }
     }
 }

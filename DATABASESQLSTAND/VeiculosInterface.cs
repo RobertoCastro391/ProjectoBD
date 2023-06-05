@@ -154,7 +154,11 @@ namespace DATABASESQLSTAND
                 {
                     textBox17.Text = row.Cells["NIF_Fornecedor"].Value.ToString();
                     textBox18.Text = row.Cells["Nome_Fornecedor"].Value.ToString();
-                    textBox19.Text = row.Cells["Data_movimento"].Value.ToString();
+                    DateTime dataMovimento;
+                    if (DateTime.TryParse(row.Cells["Data_movimento"].Value.ToString(), out dataMovimento))
+                    {
+                        dateTimePicker2.Value = dataMovimento;
+                    }
                 }
 
                 if (panel2.Visible == true)
@@ -163,7 +167,11 @@ namespace DATABASESQLSTAND
                     textBox5.Text = row.Cells["Nome_Vendedor"].Value.ToString();
                     textBox14.Text = row.Cells["NIF_Cliente"].Value.ToString();
                     textBox12.Text = row.Cells["Nome_Cliente"].Value.ToString();
-                    textBox3.Text = row.Cells["Data_movimento"].Value.ToString();
+                    DateTime dataMovimento;
+                    if (DateTime.TryParse(row.Cells["Data_movimento"].Value.ToString(), out dataMovimento))
+                    {
+                        dateTimePicker1.Value = dataMovimento;
+                    }
                 }
 
             }
@@ -438,11 +446,6 @@ namespace DATABASESQLSTAND
             nome_fornecedor = textBox18.Text;
         }
 
-        private void textBox19_TextChanged(object sender, EventArgs e)
-        {
-            data_movimento = textBox19.Text;
-        }
-
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             nif_funcionario = textBox8.Text;
@@ -451,11 +454,6 @@ namespace DATABASESQLSTAND
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             nome_funcionario = textBox5.Text;
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            data_movimento = textBox3.Text;
         }
 
         private void textBox14_TextChanged(object sender, EventArgs e)
@@ -550,6 +548,15 @@ namespace DATABASESQLSTAND
             {
                 MessageBox.Show("Por favor, selecione um veículo para venda.");
             }
+        }
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            data_movimento = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            data_movimento = dateTimePicker1.Value.ToString("yyyy/MM/dd");
         }
     }
 }

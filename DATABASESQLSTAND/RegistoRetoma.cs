@@ -115,10 +115,6 @@ namespace DATABASESQLSTAND
             ano = textBox6.Text;
         }
 
-        private void textBox19_TextChanged(object sender, EventArgs e)
-        {
-            data = textBox19.Text;
-        }
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             quilometros = textBox8.Text;
@@ -191,6 +187,11 @@ namespace DATABASESQLSTAND
             this.Hide();
             Registo registo = new Registo();
             registo.Show();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            data = dateTimePicker1.Value.ToString("yyyy/MM/dd");
         }
     }
 }

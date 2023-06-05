@@ -316,6 +316,7 @@ C:\Users\tiago\Documents\GitHub\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-win
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.csproj.AssemblyReference.cache
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.CategoriasVeiculos.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.ClientesInterface.resources
+\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Combustiveis.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.CoresVeiculos.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FornecedoresInterface.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.FuncaoFuncionario.resources
@@ -325,7 +326,11 @@ C:\Users\tiago\Documents\GitHub\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-win
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Menu.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Opçoes.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Registo.resources
+\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoCompra.resources
+\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoRetoma.resources
+\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoVenda.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.StandsInterface.resources
+\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.VeiculosInterface.resources
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.csproj.GenerateResource.cache
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.GeneratedMSBuildEditorConfig.editorconfig
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.AssemblyInfoInputs.cache
@@ -337,8 +342,3 @@ C:\Users\tiago\Documents\GitHub\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-win
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.pdb
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.genruntimeconfig.cache
 \\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\ref\DATABASESQLSTAND.dll
-\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.Combustiveis.resources
-\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoCompra.resources
-\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoRetoma.resources
-\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.RegistoVenda.resources
-\\Mac\Home\Desktop\Universidade\ProjectoBD\DATABASESQLSTAND\obj\Debug\net6.0-windows\DATABASESQLSTAND.VeiculosInterface.resources
