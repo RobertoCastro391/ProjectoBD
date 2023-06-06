@@ -2784,19 +2784,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\robertocastro\\.nuget\\packages\\": {}
+    "C:\\Users\\tiago\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
+      "projectUniqueName": "C:\\Users\\tiago\\Documents\\GitHub\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
       "projectName": "DATABASESQLSTAND",
-      "projectPath": "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
-      "packagesPath": "C:\\Users\\robertocastro\\.nuget\\packages\\",
-      "outputPath": "\\\\Mac\\Home\\Desktop\\Universidade\\ProjectoBD\\DATABASESQLSTAND\\obj\\",
+      "projectPath": "C:\\Users\\tiago\\Documents\\GitHub\\ProjectoBD\\DATABASESQLSTAND\\DATABASESQLSTAND.csproj",
+      "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tiago\\Documents\\GitHub\\ProjectoBD\\DATABASESQLSTAND\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\robertocastro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
